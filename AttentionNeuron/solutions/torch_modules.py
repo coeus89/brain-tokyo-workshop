@@ -88,17 +88,31 @@ class AttentionNeuronLayer(nn.Module):
                  scale=True):
         super(AttentionNeuronLayer, self).__init__()
         self.act_dim = act_dim
+        print("Attention Neuron Layer act_dim: " + str(self.act_dim))
         self.hidden_dim = hidden_dim
+        print("Attention Neuron Layer hidden_dim: " + str(self.hidden_dim))
         self.msg_dim = msg_dim
+        print("Attention Neuron Layer msg_dim: " + str(self.msg_dim))
         self.pos_em_dim = pos_em_dim
         self.pos_embedding = torch.from_numpy(
             pos_table(self.hidden_dim, self.pos_em_dim)
         ).float()
+        print("Attention Neuron Layer pos_em_dim: " + str(self.pos_em_dim))
+        print("Attention Neuron Layer pos_embedding: " + str(self.pos_embedding.size()))
         self.hx = None
         self.lstm = nn.LSTMCell(
             input_size=1 + self.act_dim, hidden_size=pos_em_dim)
+        print("Attention Neuron Layer LSTM bias_hh: " + str(self.lstm.bias_hh.size()))
+        print("Attention Neuron Layer LSTM bias_ih: " + str(self.lstm.bias_ih.size()))
+        print("Attention Neuron Layer LSTM weight_hh: " + str(self.lstm.weight_hh.size()))
+        print("Attention Neuron Layer LSTM weight_ih: " + str(self.lstm.weight_ih.size()))
+        print("Attention Neuron Layer LSTM hidden_size: " + str(self.lstm.hidden_size))
+        print("Attention Neuron Layer LSTM input_size: " + str(self.lstm.input_size))
+
         self.attention = SelfAttentionMatrix(
             dim_in=pos_em_dim, msg_dim=self.msg_dim, bias=bias, scale=scale)
+        print("Attention Neuron Layer msg_dim: " + str(self.msg_dim))
+        print("Attention Neuron Layer bias: " + str(self.pos_em_dim))
 
     def forward(self, obs, prev_act):
         if isinstance(obs, np.ndarray):
@@ -106,6 +120,8 @@ class AttentionNeuronLayer(nn.Module):
         else:
             x = obs.unsqueeze(-1)
         obs_dim = x.shape[0]
+        # print("Attention Neuron Layer obs_dim: " + str(obs_dim))
+        # print("Attention Neuron Layer x.shape(): " + str(x.shape()))
 
         x_aug = torch.cat([x, torch.vstack([prev_act] * obs_dim)], dim=-1)
         if self.hx is None:
@@ -114,6 +130,7 @@ class AttentionNeuronLayer(nn.Module):
                 torch.zeros(obs_dim, self.pos_em_dim).to(x.device),
             )
         self.hx = self.lstm(x_aug, self.hx)
+        # print("Key Length = hx[0] = " + str(self.hx[0].shape()))
 
         w = torch.tanh(self.attention(
             data_q=self.pos_embedding.to(x.device), data_k=self.hx[0]))

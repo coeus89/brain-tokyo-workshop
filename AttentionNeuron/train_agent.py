@@ -5,6 +5,7 @@ import util
 import numpy as np
 import multiprocessing as mp
 import cma
+import torch
 
 
 def parse_args():
@@ -20,7 +21,7 @@ def parse_args():
     parser.add_argument(
         '--num-workers', help='Number of workers.', type=int, default=-1)
     parser.add_argument(
-        '--num-gpus', help='Number of GPUs for training.', type=int, default=0)
+        '--num-gpus', help='Number of GPUs for training.', type=int, default=0)  # Changed default to 1. JK
     parser.add_argument(
         '--max-iter', help='Max training iterations.', type=int, default=10000)
     parser.add_argument(
@@ -73,7 +74,9 @@ def main(config):
 
     rnd = np.random.RandomState(seed=config.seed)
     solution = util.create_solution(device='cpu:0')
+    # solution = util.create_solution(device= torch.device("cuda" if torch.cuda.is_available() else "cpu"))  # JK
     num_params = solution.get_num_params()
+    # print(num_params)  # JK
     if config.load_model is not None:
         solution.load(config.load_model)
         print('Loaded model from {}'.format(config.load_model))
@@ -95,6 +98,7 @@ def main(config):
     repeats = [config.reps] * config.population_size
 
     device_type = 'cpu' if args.num_gpus <= 0 else 'cuda'
+    # device_type = "cuda" if torch.cuda.is_available() else "cpu"  # JK
     num_devices = mp.cpu_count() if args.num_gpus <= 0 else args.num_gpus
     with mp.get_context('spawn').Pool(
             initializer=worker_init,
