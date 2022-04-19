@@ -6,7 +6,8 @@ import numpy as np
 import multiprocessing as mp
 import cma
 import torch
-
+from pathlib import Path
+import copy
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -25,13 +26,19 @@ def parse_args():
     parser.add_argument(
         '--max-iter', help='Max training iterations.', type=int, default=10000)
     parser.add_argument(
-        '--save-interval', help='Model saving period.', type=int, default=100)
+        '--save-interval', help='Model saving period.', type=int, default=100)  # Changed from 100 to 10
     parser.add_argument(
         '--seed', help='Random seed for evaluation.', type=int, default=42)
     parser.add_argument(
         '--reps', help='Number of rollouts for fitness.', type=int, default=16)
     parser.add_argument(
         '--init-sigma', help='Initial std.', type=float, default=0.1)
+    parser.add_argument(
+        '--train_dir', help='swarm training directory', type=str, default='TempCartPole')
+    parser.add_argument(
+        '--num_swarms', help='the number of different solver instances', type=int, default=10)
+    parser.add_argument(
+        '--num_sub_iter', help='number of sub-iterations applied to each swarm', type=int, default=100)
     config, _ = parser.parse_known_args()
     return config
 
@@ -92,58 +99,80 @@ def main(config):
             'randn': np.random.randn,
         },
     )
+    solvers = (copy.deepcopy(solver) for x in range(config.num_swarms))
 
-    best_so_far = -float('Inf')
+    swarm_files = ['model' + str(x) + '.npz' for x in range(config.num_swarms)]
+    model_paths = list(map(os.path.join, [config.train_dir for x in range(config.num_swarms)], swarm_files))
+    #  save all the blank models
+    # save_params(solver=solver, solution=solution, model_path=model_paths[0])
+
+    for i in range(config.num_swarms):
+        save_params(solver, solution, model_paths[i])
+
+    # map(save_params, [solver for x in range(config.num_swarms)], [solution for x in range(config.num_swarms)], model_paths)
+
+    best_so_far = [-float('Inf') for x in range(config.num_swarms)]
     ii32 = np.iinfo(np.int32)
     repeats = [config.reps] * config.population_size
 
     device_type = 'cpu' if args.num_gpus <= 0 else 'cuda'
     # device_type = "cuda" if torch.cuda.is_available() else "cpu"  # JK
     num_devices = mp.cpu_count() if args.num_gpus <= 0 else args.num_gpus
+
+
+
     with mp.get_context('spawn').Pool(
             initializer=worker_init,
             initargs=(args.config, device_type, num_devices),
             processes=config.num_workers,
     ) as pool:
-        for n_iter in range(config.max_iter):
-            params_set = solver.ask()
-            task_seeds = [rnd.randint(0, ii32.max)] * config.population_size
-            fitnesses = []
-            ss = 0
-            while ss < config.population_size:
-                ee = ss + min(config.num_workers, config.population_size - ss)
-                fitnesses.append(
-                    pool.map(func=get_fitness,
-                             iterable=zip(params_set[ss:ee],
-                                          task_seeds[ss:ee],
-                                          repeats[ss:ee]))
-                )
-                ss = ee
-            fitnesses = np.concatenate(fitnesses)
-            if isinstance(solver, cma.CMAEvolutionStrategy):
-                # CMA minimizes.
-                solver.tell(params_set, -fitnesses)
-            else:
-                solver.tell(fitnesses)
-            logger.info(
-                'Iter={0}, '
-                'max={1:.2f}, avg={2:.2f}, min={3:.2f}, std={4:.2f}'.format(
-                    n_iter, np.max(fitnesses), np.mean(fitnesses),
-                    np.min(fitnesses), np.std(fitnesses)))
+        for n_iter in range(config.max_iter / config.num_sub_iter):
+            for swarm_file in model_paths:
+                solution.load(swarm_file)
+                for sub_iter in range(config.num_sub_iter):
 
-            best_fitness = max(fitnesses)
-            if best_fitness > best_so_far:
-                best_so_far = best_fitness
-                model_path = os.path.join(config.log_dir, 'best.npz')
-                save_params(
-                    solver=solver, solution=solution, model_path=model_path)
-                logger.info('Best model updated, score={}'.format(best_fitness))
+                    #  Left Off Here
 
-            if (n_iter + 1) % config.save_interval == 0:
-                model_path = os.path.join(
-                    config.log_dir, 'iter_{}.npz'.format(n_iter + 1))
-                save_params(
-                    solver=solver, solution=solution, model_path=model_path)
+
+
+                    params_set = solver.ask()
+                    task_seeds = [rnd.randint(0, ii32.max)] * config.population_size
+                    fitnesses = []
+                    ss = 0
+                    while ss < config.population_size:
+                        ee = ss + min(config.num_workers, config.population_size - ss)
+                        fitnesses.append(
+                            pool.map(func=get_fitness,
+                                     iterable=zip(params_set[ss:ee],
+                                                  task_seeds[ss:ee],
+                                                  repeats[ss:ee]))
+                        )
+                        ss = ee
+                    fitnesses = np.concatenate(fitnesses)
+                    if isinstance(solver, cma.CMAEvolutionStrategy):
+                        # CMA minimizes.
+                        solver.tell(params_set, -fitnesses)
+                    else:
+                        solver.tell(fitnesses)
+                    logger.info(
+                        'Iter={0}, '
+                        'max={1:.2f}, avg={2:.2f}, min={3:.2f}, std={4:.2f}'.format(
+                            n_iter, np.max(fitnesses), np.mean(fitnesses),
+                            np.min(fitnesses), np.std(fitnesses)))
+
+                    best_fitness = max(fitnesses)
+                    if best_fitness > best_so_far:
+                        best_so_far = best_fitness
+                        model_path = os.path.join(config.log_dir, 'best.npz')
+
+                        save_params(solver=solver, solution=solution, model_path=model_path)
+                        logger.info('Best model updated, score={}'.format(best_fitness))
+
+                    if (n_iter + 1) % config.save_interval == 0:
+                        model_path = os.path.join(
+                            config.log_dir, 'iter_{}.npz'.format(n_iter + 1))
+                        save_params(
+                            solver=solver, solution=solution, model_path=model_path)
 
 
 if __name__ == '__main__':
