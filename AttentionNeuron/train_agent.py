@@ -118,35 +118,31 @@ def main(config):
     device_type = 'cpu' if args.num_gpus <= 0 else 'cuda'
     # device_type = "cuda" if torch.cuda.is_available() else "cpu"  # JK
     num_devices = mp.cpu_count() if args.num_gpus <= 0 else args.num_gpus
-
-
-
     with mp.get_context('spawn').Pool(
             initializer=worker_init,
             initargs=(args.config, device_type, num_devices),
             processes=config.num_workers,
     ) as pool:
-        for n_iter in range(config.max_iter / config.num_sub_iter):
-            for swarm_file in model_paths:
-                solution.load(swarm_file)
+        for n_iter in range((int(config.max_iter / config.num_sub_iter))):
+            for i in range(config.num_swarms):
+                solution.load(os.path.join(config.train_dir, swarm_files[i]))
+                params_set = solution.get_params()
+                # solvers[i].x0 = params_set
+                solver.x0 = params_set
                 for sub_iter in range(config.num_sub_iter):
 
-                    #  Left Off Here
-
-
-
-                    params_set = solver.ask()
                     task_seeds = [rnd.randint(0, ii32.max)] * config.population_size
                     fitnesses = []
                     ss = 0
                     while ss < config.population_size:
                         ee = ss + min(config.num_workers, config.population_size - ss)
-                        fitnesses.append(
-                            pool.map(func=get_fitness,
-                                     iterable=zip(params_set[ss:ee],
-                                                  task_seeds[ss:ee],
-                                                  repeats[ss:ee]))
-                        )
+                        # fitnesses.append(
+                        #     pool.map(func=get_fitness,
+                        #              iterable=zip(params_set[ss:ee],
+                        #                           task_seeds[ss:ee],
+                        #                           repeats[ss:ee]))
+                        # )
+                        fitnesses.append(list(map(get_fitness, zip(params_set[ss:ee], task_seeds[ss:ee], repeats[ss:ee]))))
                         ss = ee
                     fitnesses = np.concatenate(fitnesses)
                     if isinstance(solver, cma.CMAEvolutionStrategy):
@@ -157,22 +153,27 @@ def main(config):
                     logger.info(
                         'Iter={0}, '
                         'max={1:.2f}, avg={2:.2f}, min={3:.2f}, std={4:.2f}'.format(
-                            n_iter, np.max(fitnesses), np.mean(fitnesses),
+                            n_iter*100+sub_iter, np.max(fitnesses), np.mean(fitnesses),
                             np.min(fitnesses), np.std(fitnesses)))
 
                     best_fitness = max(fitnesses)
-                    if best_fitness > best_so_far:
-                        best_so_far = best_fitness
-                        model_path = os.path.join(config.log_dir, 'best.npz')
+                    if best_fitness > best_so_far[i]:
+                        best_so_far[i] = best_fitness
 
-                        save_params(solver=solver, solution=solution, model_path=model_path)
-                        logger.info('Best model updated, score={}'.format(best_fitness))
+                        # model_path = os.path.join(config.log_dir, 'best.npz')
 
-                    if (n_iter + 1) % config.save_interval == 0:
-                        model_path = os.path.join(
-                            config.log_dir, 'iter_{}.npz'.format(n_iter + 1))
-                        save_params(
-                            solver=solver, solution=solution, model_path=model_path)
+                        save_params(solver=solver, solution=solution, model_path=model_paths[i])
+                        logger.info('Best model{} updated, score={}'.format(i, best_fitness))
+
+            # if (n_iter + 1) % config.save_interval == 0:
+            best_model_index = best_so_far.index(max(best_so_far))
+            solution.load(swarm_files[best_model_index])  # load the best model so far
+            #  Save the model
+            model_path = os.path.join(config.log_dir, 'best_iter_{}.npz'.format((n_iter + 1) * config.num_sub_iter))
+            save_params(solver=solver, solution=solution, model_path=model_path)
+            #  Save over all of the models with the best model
+            for j in range(config.num_swarms):
+                save_params(solver, solution, model_paths[j])
 
 
 if __name__ == '__main__':
