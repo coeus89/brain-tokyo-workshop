@@ -6,7 +6,8 @@ import numpy as np
 import multiprocessing as mp
 import cma
 import torch
-from pathlib import Path
+from numpy import genfromtxt
+import matplotlib.pyplot as plt
 import copy
 
 def parse_args():
@@ -36,9 +37,9 @@ def parse_args():
     parser.add_argument(
         '--train_dir', help='swarm training directory', type=str, default='TempCartPole')
     parser.add_argument(
-        '--num_swarms', help='the number of different solver instances', type=int, default=10)
+        '--num_swarms', help='the number of different solver instances', type=int, default=3)
     parser.add_argument(
-        '--num_sub_iter', help='number of sub-iterations applied to each swarm', type=int, default=100)
+        '--num_sub_iter', help='number of sub-iterations applied to each swarm', type=int, default=10)
     config, _ = parser.parse_known_args()
     return config
 
@@ -105,32 +106,36 @@ def main(config):
     swarm_files = ['model' + str(x) + '.npz' for x in range(config.num_swarms)]
     model_paths = list(map(os.path.join, [config.train_dir for x in range(config.num_swarms)], swarm_files))
     #  save all the blank models
-    # save_params(solver=solver, solution=solution, model_path=model_paths[0])
-
     for i in range(config.num_swarms):
         save_params(solvers[i], solutions[i], model_paths[i])
-    # res = (save_params(solver, solution, model_paths[i]) for i in range(config.num_swarms))
 
-    # map(save_params, [solver for x in range(config.num_swarms)], [solution for x in range(config.num_swarms)], model_paths)
-
+    best_fitness = -float('Inf')
     best_so_far = [-float('Inf') for x in range(config.num_swarms)]
     ii32 = np.iinfo(np.int32)
     repeats = [config.reps] * config.population_size
 
     device_type = 'cpu' if args.num_gpus <= 0 else 'cuda'
-    # device_type = "cuda" if torch.cuda.is_available() else "cpu"  # JK
+
+    #  For data saving as well as displaying a graph.
+    fp = os.path.join(config.train_dir, "FitnessLog.csv")
+    if os.path.exists(fp):
+        os.remove(fp)
+    file = open(fp, "w")
+    file.write("{},{}\n".format("Iteration", "Fitness"))
+
+
+
     num_devices = mp.cpu_count() if args.num_gpus <= 0 else args.num_gpus
     with mp.get_context('spawn').Pool(
             initializer=worker_init,
             initargs=(args.config, device_type, num_devices),
             processes=config.num_workers,
     ) as pool:
-        for n_iter in range(int(config.max_iter / config.num_sub_iter)):
-            for sub_iter in range(config.num_sub_iter):
-
-                for i in range(config.num_swarms):
-                    # solution.load(os.path.join(config.train_dir, swarm_files[i]))
-                    solution = solutions[i]
+        for n_iter in range(int(config.max_iter / config.num_sub_iter)):  # For each major iteration
+            for j in range(config.num_swarms):
+                solutions[j].load(model_paths[j])
+            for sub_iter in range(config.num_sub_iter):  # For each sub-iteration
+                for i in range(config.num_swarms):  # For each swarm
                     solver = solvers[i]
                     params_set = solver.ask()
                     task_seeds = [rnd.randint(0, ii32.max)] * config.population_size
@@ -152,22 +157,39 @@ def main(config):
                     else:
                         solver.tell(fitnesses)
                     logger.info(
-                        'Iter={0}, '
+                        'Iter={0}, Swarm={5}, '
                         'max={1:.2f}, avg={2:.2f}, min={3:.2f}, std={4:.2f}'.format(
-                            n_iter * 100 + sub_iter, np.max(fitnesses), np.mean(fitnesses),
-                            np.min(fitnesses), np.std(fitnesses)))
+                            (n_iter * config.num_sub_iter) + sub_iter,  # n_iter * int(config.max_iter / config.num_sub_iter) + sub_iter,
+                            np.max(fitnesses), np.mean(fitnesses),
+                            np.min(fitnesses), np.std(fitnesses), i))
+                    best_iter_fitness = max(fitnesses)
+                    if best_iter_fitness > best_so_far[i]:
+                        best_so_far[i] = best_iter_fitness
+                        # model_path = os.path.join(config.log_dir, 'best.npz')
+                        save_params(solvers[i], solutions[i], model_paths[i])
 
             # if (n_iter + 1) % config.save_interval == 0:
-            best_model_index = best_so_far.index(max(best_so_far))
-            solution.load(swarm_files[best_model_index])  # load the best model so far
-            #  Save the model
-            model_path = os.path.join(config.log_dir,
-                                      'best_iter_{}.npz'.format((n_iter + 1) * config.num_sub_iter))
-            save_params(solver=solver, solution=solution, model_path=model_path)
-            #  Save over all of the models with the best
+            best_iter_index = best_so_far.index(max(best_so_far))
+            if best_so_far[best_iter_index] > best_fitness:
+                best_fitness = best_so_far[best_iter_index]
+                #  Save the model
+                model_path = os.path.join(config.log_dir,
+                                          'best_iter_{}.npz'.format((n_iter + 1) * config.num_sub_iter))
+                save_params(solver=solvers[best_iter_index], solution=solutions[best_iter_index],
+                            model_path=model_path)
+                #  Save over all of the models with the best
+                for j in range(config.num_swarms):
+                    save_params(solvers[best_iter_index], solutions[best_iter_index], model_paths[j])
+            file.write("{},{}\n".format((n_iter + 1) * config.num_sub_iter, best_so_far))
+    pool.join()
+    file.close()
+    data = genfromtxt(os.path.join(config.train_dir, "FitnessLog.csv"), delimiter=",")
+    plt.plot(data[1:])  # I want to exclude the first row (labels)
+    plt.xlabel('Iteration')
+    plt.ylabel('y stuff')
+    plt.title('my test result')
+    plt.show()
 
-            for j in range(config.num_swarms):
-                 save_params(solvers[j], solutions[j], model_paths[j])
 
 
 if __name__ == '__main__':
