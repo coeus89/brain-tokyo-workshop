@@ -9,6 +9,7 @@ import torch
 from numpy import genfromtxt
 import matplotlib.pyplot as plt
 import copy
+import csv
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -177,18 +178,50 @@ def main(config):
                                           'best_iter_{}.npz'.format((n_iter + 1) * config.num_sub_iter))
                 save_params(solver=solvers[best_iter_index], solution=solutions[best_iter_index],
                             model_path=model_path)
+                logger.info('Best model updated, score={}'.format(best_fitness))
                 #  Save over all of the models with the best
                 for j in range(config.num_swarms):
                     save_params(solvers[best_iter_index], solutions[best_iter_index], model_paths[j])
-            file.write("{},{}\n".format((n_iter + 1) * config.num_sub_iter, best_so_far))
+            file.write("{},{}\n".format((n_iter + 1) * config.num_sub_iter, best_fitness))
     pool.join()
     file.close()
-    data = genfromtxt(os.path.join(config.train_dir, "FitnessLog.csv"), delimiter=",")
-    plt.plot(data[1:])  # I want to exclude the first row (labels)
-    plt.xlabel('Iteration')
-    plt.ylabel('y stuff')
-    plt.title('my test result')
+    X = []
+    Y = []
+    X1 = []
+    Y1 = []
+    X_label = ""
+    Y_label = ""
+    with open(os.path.join(config.log_dir, "FitnessLog.csv"), 'r') as datafile:
+        plotting = csv.reader(datafile, delimiter=',')
+        i = False
+        for ROWS in plotting:
+            if i == False:
+                X_label = str(ROWS[0])
+                Y_label = str(ROWS[1])
+                i = True
+            else:
+                X.append(int(ROWS[0]))
+                Y.append(float(ROWS[1]))
+
+    with open(os.path.join(config.log_dir, "FitnessLog_Original.csv"), 'r') as datafile:
+        plotting = csv.reader(datafile, delimiter=',')
+        i = False
+        for ROWS in plotting:
+            if i is not False:
+                X1.append(int(ROWS[0]))
+                Y1.append(float(ROWS[1]))
+            else:
+                i = True
+    plt.figure(clear=True)
+    plt.plot(X, Y, color="blue", label="Swarm Fitness")
+    plt.plot(X1, Y1, color="red", label="Original Fitness")
+    plt.xlabel(X_label)
+    plt.ylabel(Y_label)
+    plt.title('Fitness Graph')
+    plt.legend()
     plt.show()
+    plt.close('all')
+
 
 
 

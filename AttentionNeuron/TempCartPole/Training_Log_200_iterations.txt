@@ -1,0 +1,849 @@
+Microsoft Windows [Version 10.0.22000.613]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\jkara>cd s:
+S:\
+
+C:\Users\jkara>s:
+
+S:\>cd S:\Users\Jkara\OneDrive\Documents\CPSC-597\Project_Workspace\brain-tokyo-workshop\AttentionNeuron
+
+S:\Users\Jkara\OneDrive\Documents\CPSC-597\Project_Workspace\brain-tokyo-workshop\AttentionNeuron>conda activate pytorch2022
+
+(pytorch2022) S:\Users\Jkara\OneDrive\Documents\CPSC-597\Project_Workspace\brain-tokyo-workshop\AttentionNeuron>python train_agent.py --config=configs/cartpole_pi.gin --log-dir=log/cartpole_pi --reps=16 --max-iter=200
+2022-04-26 14:55:22,465 35096 [INFO] Logs and models will be save in log/cartpole_pi.
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+(128_w,256)-aCMA-ES (mu_w=66.9,w_1=3%) in dimension 913 (seed=42, Tue Apr 26 14:55:22 2022)
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+s:\users\jkara\onedrive\documents\cpsc-597\project_workspace\gym\gym\utils\seeding.py:27: DeprecationWarning: WARN: Function `rng.rand(*size)` is marked as deprecated and will be removed in the future. Please use `Generator.random(size)` instead.
+  deprecation(
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+s:\users\jkara\onedrive\documents\cpsc-597\project_workspace\gym\gym\utils\seeding.py:27: DeprecationWarning: WARN: Function `rng.rand(*size)` is marked as deprecated and will be removed in the future. Please use `Generator.random(size)` instead.
+  deprecation(
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+#params=913
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+s:\users\jkara\onedrive\documents\cpsc-597\project_workspace\gym\gym\utils\seeding.py:27: DeprecationWarning: WARN: Function `rng.rand(*size)` is marked as deprecated and will be removed in the future. Please use `Generator.random(size)` instead.
+  deprecation(
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+s:\users\jkara\onedrive\documents\cpsc-597\project_workspace\gym\gym\utils\seeding.py:27: DeprecationWarning: WARN: Function `rng.rand(*size)` is marked as deprecated and will be removed in the future. Please use `Generator.random(size)` instead.
+  deprecation(
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+s:\users\jkara\onedrive\documents\cpsc-597\project_workspace\gym\gym\utils\seeding.py:27: DeprecationWarning: WARN: Function `rng.rand(*size)` is marked as deprecated and will be removed in the future. Please use `Generator.random(size)` instead.
+  deprecation(
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+s:\users\jkara\onedrive\documents\cpsc-597\project_workspace\gym\gym\utils\seeding.py:27: DeprecationWarning: WARN: Function `rng.rand(*size)` is marked as deprecated and will be removed in the future. Please use `Generator.random(size)` instead.
+  deprecation(
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+s:\users\jkara\onedrive\documents\cpsc-597\project_workspace\gym\gym\utils\seeding.py:27: DeprecationWarning: WARN: Function `rng.rand(*size)` is marked as deprecated and will be removed in the future. Please use `Generator.random(size)` instead.
+  deprecation(
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+s:\users\jkara\onedrive\documents\cpsc-597\project_workspace\gym\gym\utils\seeding.py:27: DeprecationWarning: WARN: Function `rng.rand(*size)` is marked as deprecated and will be removed in the future. Please use `Generator.random(size)` instead.
+  deprecation(
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+s:\users\jkara\onedrive\documents\cpsc-597\project_workspace\gym\gym\utils\seeding.py:27: DeprecationWarning: WARN: Function `rng.rand(*size)` is marked as deprecated and will be removed in the future. Please use `Generator.random(size)` instead.
+  deprecation(
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+s:\users\jkara\onedrive\documents\cpsc-597\project_workspace\gym\gym\utils\seeding.py:27: DeprecationWarning: WARN: Function `rng.rand(*size)` is marked as deprecated and will be removed in the future. Please use `Generator.random(size)` instead.
+  deprecation(
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+Attention Neuron Layer act_dim: 1
+Attention Neuron Layer hidden_dim: 16
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer pos_em_dim: 8
+Attention Neuron Layer pos_embedding: torch.Size([16, 8])
+Attention Neuron Layer LSTM bias_hh: torch.Size([32])
+Attention Neuron Layer LSTM bias_ih: torch.Size([32])
+Attention Neuron Layer LSTM weight_hh: torch.Size([32, 8])
+Attention Neuron Layer LSTM weight_ih: torch.Size([32, 2])
+Attention Neuron Layer LSTM hidden_size: 8
+Attention Neuron Layer LSTM input_size: 2
+Attention Neuron Layer msg_dim: 32
+Attention Neuron Layer bias: 8
+#params=913
+s:\users\jkara\onedrive\documents\cpsc-597\project_workspace\gym\gym\utils\seeding.py:27: DeprecationWarning: WARN: Function `rng.rand(*size)` is marked as deprecated and will be removed in the future. Please use `Generator.random(size)` instead.
+  deprecation(
+s:\users\jkara\onedrive\documents\cpsc-597\project_workspace\gym\gym\utils\seeding.py:27: DeprecationWarning: WARN: Function `rng.rand(*size)` is marked as deprecated and will be removed in the future. Please use `Generator.random(size)` instead.
+  deprecation(
+2022-04-26 14:56:02,050 35096 [INFO] Iter=0, Swarm=0, max=93.87, avg=24.30, min=6.91, std=15.03
+2022-04-26 14:56:26,572 35096 [INFO] Iter=0, Swarm=1, max=46.54, avg=13.48, min=6.29, std=6.94
+2022-04-26 14:56:42,734 35096 [INFO] Iter=0, Swarm=2, max=46.20, avg=15.45, min=6.19, std=5.22
+2022-04-26 14:57:00,392 35096 [INFO] Iter=1, Swarm=0, max=36.09, avg=12.71, min=5.55, std=5.26
+2022-04-26 14:57:22,162 35096 [INFO] Iter=1, Swarm=1, max=43.77, avg=15.71, min=8.63, std=6.75
+2022-04-26 14:57:43,457 35096 [INFO] Iter=1, Swarm=2, max=56.99, avg=19.80, min=8.93, std=7.51
+2022-04-26 14:58:12,210 35096 [INFO] Iter=2, Swarm=0, max=60.86, avg=23.52, min=10.06, std=9.13
+2022-04-26 14:58:25,943 35096 [INFO] Iter=2, Swarm=1, max=28.07, avg=6.21, min=3.59, std=3.75
+2022-04-26 14:58:41,244 35096 [INFO] Iter=2, Swarm=2, max=32.03, avg=10.83, min=5.23, std=5.42
+2022-04-26 14:59:04,935 35096 [INFO] Iter=3, Swarm=0, max=55.57, avg=26.92, min=13.78, std=6.70
+2022-04-26 14:59:30,939 35096 [INFO] Iter=3, Swarm=1, max=117.30, avg=20.79, min=4.80, std=12.11
+2022-04-26 14:59:47,130 35096 [INFO] Iter=3, Swarm=2, max=33.72, avg=12.49, min=4.67, std=5.08
+2022-04-26 15:00:14,698 35096 [INFO] Iter=4, Swarm=0, max=48.99, avg=20.59, min=7.62, std=6.83
+2022-04-26 15:00:39,881 35096 [INFO] Iter=4, Swarm=1, max=47.92, avg=15.19, min=6.29, std=6.13
+2022-04-26 15:00:53,112 35096 [INFO] Iter=4, Swarm=2, max=30.45, avg=7.07, min=4.75, std=3.20
+2022-04-26 15:01:14,618 35096 [INFO] Iter=5, Swarm=0, max=46.74, avg=15.74, min=6.68, std=7.15
+2022-04-26 15:01:42,230 35096 [INFO] Iter=5, Swarm=1, max=73.47, avg=25.37, min=13.21, std=12.50
+2022-04-26 15:01:55,859 35096 [INFO] Iter=5, Swarm=2, max=52.29, avg=15.46, min=7.67, std=7.78
+2022-04-26 15:02:08,889 35096 [INFO] Iter=6, Swarm=0, max=37.88, avg=8.92, min=4.53, std=5.59
+2022-04-26 15:02:35,423 35096 [INFO] Iter=6, Swarm=1, max=60.16, avg=24.79, min=11.81, std=8.40
+2022-04-26 15:03:01,577 35096 [INFO] Iter=6, Swarm=2, max=83.03, avg=31.25, min=16.37, std=10.54
+2022-04-26 15:03:24,747 35096 [INFO] Iter=7, Swarm=0, max=58.88, avg=20.48, min=9.73, std=8.35
+2022-04-26 15:03:42,997 35096 [INFO] Iter=7, Swarm=1, max=49.36, avg=20.10, min=10.32, std=6.94
+2022-04-26 15:03:59,228 35096 [INFO] Iter=7, Swarm=2, max=38.54, avg=17.37, min=10.56, std=5.94
+2022-04-26 15:04:19,565 35096 [INFO] Iter=8, Swarm=0, max=52.23, avg=16.79, min=7.50, std=5.59
+2022-04-26 15:04:33,646 35096 [INFO] Iter=8, Swarm=1, max=32.14, avg=10.98, min=7.70, std=4.76
+2022-04-26 15:04:59,716 35096 [INFO] Iter=8, Swarm=2, max=73.91, avg=30.92, min=10.30, std=12.59
+2022-04-26 15:05:21,360 35096 [INFO] Iter=9, Swarm=0, max=66.33, avg=22.03, min=7.31, std=12.37
+2022-04-26 15:05:47,501 35096 [INFO] Iter=9, Swarm=1, max=72.29, avg=26.79, min=12.96, std=9.59
+2022-04-26 15:06:14,240 35096 [INFO] Iter=9, Swarm=2, max=59.84, avg=14.28, min=4.39, std=9.27
+2022-04-26 15:06:43,057 35096 [INFO] Iter=10, Swarm=0, max=94.46, avg=33.28, min=12.50, std=17.58
+2022-04-26 15:06:57,212 35096 [INFO] Iter=10, Swarm=1, max=41.51, avg=13.16, min=8.70, std=5.73
+2022-04-26 15:07:17,616 35096 [INFO] Iter=10, Swarm=2, max=33.42, avg=10.91, min=6.53, std=4.97
+2022-04-26 15:07:36,864 35096 [INFO] Iter=11, Swarm=0, max=44.94, avg=17.86, min=6.62, std=8.12
+2022-04-26 15:07:51,806 35096 [INFO] Iter=11, Swarm=1, max=28.24, avg=13.94, min=6.25, std=4.30
+2022-04-26 15:08:08,556 35096 [INFO] Iter=11, Swarm=2, max=45.59, avg=17.06, min=8.30, std=7.72
+2022-04-26 15:08:28,006 35096 [INFO] Iter=12, Swarm=0, max=49.09, avg=19.23, min=10.16, std=7.31
+2022-04-26 15:08:54,722 35096 [INFO] Iter=12, Swarm=1, max=73.04, avg=28.75, min=13.88, std=10.19
+2022-04-26 15:09:13,894 35096 [INFO] Iter=12, Swarm=2, max=53.45, avg=22.43, min=7.90, std=8.26
+2022-04-26 15:09:32,854 35096 [INFO] Iter=13, Swarm=0, max=53.90, avg=19.13, min=9.67, std=10.03
+2022-04-26 15:09:52,356 35096 [INFO] Iter=13, Swarm=1, max=60.58, avg=20.11, min=9.23, std=7.33
+2022-04-26 15:10:07,251 35096 [INFO] Iter=13, Swarm=2, max=25.98, avg=12.19, min=7.29, std=3.91
+2022-04-26 15:10:31,539 35096 [INFO] Iter=14, Swarm=0, max=66.27, avg=29.17, min=9.87, std=8.63
+2022-04-26 15:10:53,321 35096 [INFO] Iter=14, Swarm=1, max=59.85, avg=22.86, min=9.86, std=9.01
+2022-04-26 15:11:23,682 35096 [INFO] Iter=14, Swarm=2, max=76.84, avg=24.63, min=10.10, std=12.59
+2022-04-26 15:11:41,125 35096 [INFO] Iter=15, Swarm=0, max=38.41, avg=15.04, min=7.43, std=5.74
+2022-04-26 15:11:58,229 35096 [INFO] Iter=15, Swarm=1, max=50.14, avg=15.33, min=6.63, std=5.01
+2022-04-26 15:12:20,377 35096 [INFO] Iter=15, Swarm=2, max=34.66, avg=10.53, min=5.52, std=4.85
+2022-04-26 15:12:33,575 35096 [INFO] Iter=16, Swarm=0, max=31.97, avg=13.06, min=7.91, std=4.98
+2022-04-26 15:12:56,110 35096 [INFO] Iter=16, Swarm=1, max=54.69, avg=27.48, min=12.47, std=7.68
+2022-04-26 15:13:11,836 35096 [INFO] Iter=16, Swarm=2, max=34.83, avg=11.11, min=5.90, std=5.59
+2022-04-26 15:13:27,409 35096 [INFO] Iter=17, Swarm=0, max=32.97, avg=10.01, min=4.36, std=4.84
+2022-04-26 15:13:52,370 35096 [INFO] Iter=17, Swarm=1, max=50.26, avg=17.48, min=6.32, std=9.85
+2022-04-26 15:14:10,867 35096 [INFO] Iter=17, Swarm=2, max=34.05, avg=11.50, min=4.84, std=5.74
+2022-04-26 15:14:25,132 35096 [INFO] Iter=18, Swarm=0, max=38.38, avg=12.80, min=6.07, std=5.18
+2022-04-26 15:14:49,177 35096 [INFO] Iter=18, Swarm=1, max=61.01, avg=23.74, min=11.32, std=9.44
+2022-04-26 15:15:14,902 35096 [INFO] Iter=18, Swarm=2, max=73.15, avg=24.78, min=9.96, std=14.58
+2022-04-26 15:15:31,790 35096 [INFO] Iter=19, Swarm=0, max=65.85, avg=15.97, min=5.41, std=10.65
+2022-04-26 15:15:52,033 35096 [INFO] Iter=19, Swarm=1, max=53.30, avg=22.04, min=8.56, std=9.51
+2022-04-26 15:16:08,982 35096 [INFO] Iter=19, Swarm=2, max=68.89, avg=18.74, min=9.24, std=8.44
+2022-04-26 15:16:29,953 35096 [INFO] Iter=20, Swarm=0, max=82.06, avg=27.08, min=11.66, std=11.61
+2022-04-26 15:16:57,593 35096 [INFO] Iter=20, Swarm=1, max=64.21, avg=23.55, min=10.21, std=10.57
+2022-04-26 15:17:21,195 35096 [INFO] Iter=20, Swarm=2, max=47.67, avg=20.74, min=9.29, std=8.11
+2022-04-26 15:17:34,661 35096 [INFO] Iter=21, Swarm=0, max=38.15, avg=13.63, min=8.73, std=4.26
+2022-04-26 15:17:53,745 35096 [INFO] Iter=21, Swarm=1, max=41.61, avg=13.01, min=6.79, std=5.71
+2022-04-26 15:18:19,986 35096 [INFO] Iter=21, Swarm=2, max=74.29, avg=32.35, min=14.57, std=12.55
+2022-04-26 15:18:48,721 35096 [INFO] Iter=22, Swarm=0, max=60.10, avg=23.43, min=11.52, std=8.99
+2022-04-26 15:19:15,248 35096 [INFO] Iter=22, Swarm=1, max=73.60, avg=30.76, min=13.94, std=11.10
+2022-04-26 15:19:37,547 35096 [INFO] Iter=22, Swarm=2, max=61.93, avg=23.39, min=10.44, std=7.59
+2022-04-26 15:19:56,862 35096 [INFO] Iter=23, Swarm=0, max=43.69, avg=15.02, min=7.05, std=7.49
+2022-04-26 15:20:14,019 35096 [INFO] Iter=23, Swarm=1, max=69.48, avg=23.67, min=10.90, std=9.38
+2022-04-26 15:20:41,026 35096 [INFO] Iter=23, Swarm=2, max=97.61, avg=36.69, min=15.56, std=11.73
+2022-04-26 15:20:52,160 35096 [INFO] Iter=24, Swarm=0, max=36.15, avg=9.57, min=3.37, std=6.01
+2022-04-26 15:21:29,983 35096 [INFO] Iter=24, Swarm=1, max=110.45, avg=40.22, min=15.94, std=22.50
+2022-04-26 15:21:55,321 35096 [INFO] Iter=24, Swarm=2, max=92.96, avg=24.76, min=9.91, std=13.73
+2022-04-26 15:22:21,063 35096 [INFO] Iter=25, Swarm=0, max=63.40, avg=23.52, min=9.27, std=9.59
+2022-04-26 15:22:39,196 35096 [INFO] Iter=25, Swarm=1, max=49.57, avg=13.35, min=4.16, std=8.86
+2022-04-26 15:22:59,254 35096 [INFO] Iter=25, Swarm=2, max=59.02, avg=19.28, min=9.28, std=8.72
+2022-04-26 15:23:12,584 35096 [INFO] Iter=26, Swarm=0, max=25.85, avg=7.25, min=3.24, std=4.02
+2022-04-26 15:23:31,385 35096 [INFO] Iter=26, Swarm=1, max=40.38, avg=18.20, min=7.24, std=6.35
+2022-04-26 15:23:54,479 35096 [INFO] Iter=26, Swarm=2, max=58.73, avg=28.50, min=11.37, std=7.78
+2022-04-26 15:24:17,823 35096 [INFO] Iter=27, Swarm=0, max=83.95, avg=19.41, min=6.52, std=13.14
+2022-04-26 15:24:44,960 35096 [INFO] Iter=27, Swarm=1, max=104.58, avg=38.14, min=14.37, std=14.92
+2022-04-26 15:25:00,310 35096 [INFO] Iter=27, Swarm=2, max=31.62, avg=14.58, min=8.61, std=4.52
+2022-04-26 15:25:17,773 35096 [INFO] Iter=28, Swarm=0, max=50.10, avg=20.16, min=9.83, std=8.23
+2022-04-26 15:25:40,647 35096 [INFO] Iter=28, Swarm=1, max=77.76, avg=31.78, min=13.37, std=10.91
+2022-04-26 15:25:54,262 35096 [INFO] Iter=28, Swarm=2, max=26.70, avg=11.34, min=7.11, std=3.73
+2022-04-26 15:26:23,386 35096 [INFO] Iter=29, Swarm=0, max=85.63, avg=21.69, min=6.62, std=13.53
+2022-04-26 15:26:46,478 35096 [INFO] Iter=29, Swarm=1, max=67.61, avg=29.90, min=13.23, std=12.33
+2022-04-26 15:27:02,002 35096 [INFO] Iter=29, Swarm=2, max=24.66, avg=5.91, min=3.05, std=2.93
+2022-04-26 15:27:23,456 35096 [INFO] Iter=30, Swarm=0, max=62.13, avg=21.41, min=7.85, std=10.21
+2022-04-26 15:27:53,138 35096 [INFO] Iter=30, Swarm=1, max=71.36, avg=26.17, min=7.16, std=13.97
+2022-04-26 15:28:17,365 35096 [INFO] Iter=30, Swarm=2, max=50.46, avg=26.09, min=13.72, std=6.84
+2022-04-26 15:28:35,458 35096 [INFO] Iter=31, Swarm=0, max=53.87, avg=21.51, min=8.32, std=7.91
+2022-04-26 15:28:49,780 35096 [INFO] Iter=31, Swarm=1, max=35.88, avg=12.26, min=7.35, std=5.40
+2022-04-26 15:29:14,922 35096 [INFO] Iter=31, Swarm=2, max=120.07, avg=31.44, min=13.62, std=12.95
+2022-04-26 15:29:40,856 35096 [INFO] Iter=32, Swarm=0, max=86.90, avg=30.81, min=11.90, std=11.87
+2022-04-26 15:30:04,396 35096 [INFO] Iter=32, Swarm=1, max=56.15, avg=32.33, min=15.97, std=9.97
+2022-04-26 15:30:15,597 35096 [INFO] Iter=32, Swarm=2, max=23.67, avg=6.58, min=3.54, std=3.46
+2022-04-26 15:30:29,893 35096 [INFO] Iter=33, Swarm=0, max=34.07, avg=8.93, min=4.67, std=4.79
+2022-04-26 15:30:43,798 35096 [INFO] Iter=33, Swarm=1, max=35.12, avg=12.84, min=7.25, std=5.64
+2022-04-26 15:31:05,865 35096 [INFO] Iter=33, Swarm=2, max=56.55, avg=30.29, min=13.21, std=9.18
+2022-04-26 15:31:24,487 35096 [INFO] Iter=34, Swarm=0, max=54.64, avg=20.72, min=8.72, std=8.54
+2022-04-26 15:31:39,047 35096 [INFO] Iter=34, Swarm=1, max=23.18, avg=10.93, min=6.70, std=3.55
+2022-04-26 15:31:53,356 35096 [INFO] Iter=34, Swarm=2, max=36.71, avg=13.47, min=6.81, std=5.96
+2022-04-26 15:32:19,425 35096 [INFO] Iter=35, Swarm=0, max=127.86, avg=27.71, min=9.32, std=15.35
+2022-04-26 15:32:47,299 35096 [INFO] Iter=35, Swarm=1, max=80.28, avg=20.73, min=5.81, std=13.04
+2022-04-26 15:33:03,349 35096 [INFO] Iter=35, Swarm=2, max=50.69, avg=19.20, min=7.68, std=8.41
+2022-04-26 15:33:34,087 35096 [INFO] Iter=36, Swarm=0, max=208.56, avg=36.14, min=13.91, std=19.08
+2022-04-26 15:33:53,142 35096 [INFO] Iter=36, Swarm=1, max=45.97, avg=20.64, min=9.31, std=7.50
+2022-04-26 15:34:04,756 35096 [INFO] Iter=36, Swarm=2, max=28.44, avg=10.72, min=6.35, std=3.99
+2022-04-26 15:34:44,639 35096 [INFO] Iter=37, Swarm=0, max=229.40, avg=41.67, min=14.12, std=26.34
+2022-04-26 15:35:03,576 35096 [INFO] Iter=37, Swarm=1, max=46.09, avg=24.21, min=12.25, std=6.94
+2022-04-26 15:35:32,119 35096 [INFO] Iter=37, Swarm=2, max=82.81, avg=24.72, min=8.46, std=13.55
+2022-04-26 15:35:57,327 35096 [INFO] Iter=38, Swarm=0, max=145.98, avg=31.18, min=8.63, std=15.47
+2022-04-26 15:36:18,410 35096 [INFO] Iter=38, Swarm=1, max=50.75, avg=16.35, min=9.31, std=7.29
+2022-04-26 15:36:40,256 35096 [INFO] Iter=38, Swarm=2, max=74.16, avg=23.47, min=8.03, std=8.97
+2022-04-26 15:37:11,114 35096 [INFO] Iter=39, Swarm=0, max=178.01, avg=32.61, min=10.34, std=22.63
+2022-04-26 15:37:31,008 35096 [INFO] Iter=39, Swarm=1, max=87.85, avg=20.11, min=8.45, std=11.04
+2022-04-26 15:37:52,976 35096 [INFO] Iter=39, Swarm=2, max=88.92, avg=26.54, min=13.77, std=9.02
+2022-04-26 15:38:23,223 35096 [INFO] Iter=40, Swarm=0, max=156.52, avg=35.54, min=9.81, std=18.71
+2022-04-26 15:38:38,725 35096 [INFO] Iter=40, Swarm=1, max=46.40, avg=18.84, min=9.34, std=6.59
+2022-04-26 15:39:00,894 35096 [INFO] Iter=40, Swarm=2, max=63.18, avg=25.73, min=12.53, std=7.62
+2022-04-26 15:39:46,341 35096 [INFO] Iter=41, Swarm=0, max=191.68, avg=42.14, min=14.13, std=26.77
+2022-04-26 15:40:00,238 35096 [INFO] Iter=41, Swarm=1, max=40.41, avg=11.83, min=5.05, std=7.16
+2022-04-26 15:40:28,231 35096 [INFO] Iter=41, Swarm=2, max=103.56, avg=28.84, min=12.74, std=13.00
+2022-04-26 15:41:09,239 35096 [INFO] Iter=42, Swarm=0, max=180.62, avg=34.62, min=4.54, std=28.69
+2022-04-26 15:41:26,038 35096 [INFO] Iter=42, Swarm=1, max=41.35, avg=17.03, min=6.83, std=6.78
+2022-04-26 15:41:44,427 35096 [INFO] Iter=42, Swarm=2, max=64.23, avg=22.42, min=10.37, std=8.84
+2022-04-26 15:42:25,507 35096 [INFO] Iter=43, Swarm=0, max=200.54, avg=36.61, min=11.20, std=30.07
+2022-04-26 15:42:42,212 35096 [INFO] Iter=43, Swarm=1, max=34.00, avg=16.74, min=9.91, std=5.73
+2022-04-26 15:43:03,281 35096 [INFO] Iter=43, Swarm=2, max=102.98, avg=25.76, min=9.25, std=9.55
+2022-04-26 15:43:42,321 35096 [INFO] Iter=44, Swarm=0, max=155.90, avg=36.32, min=8.45, std=25.44
+2022-04-26 15:44:00,646 35096 [INFO] Iter=44, Swarm=1, max=68.16, avg=21.65, min=7.40, std=9.64
+2022-04-26 15:44:21,093 35096 [INFO] Iter=44, Swarm=2, max=69.74, avg=23.55, min=11.98, std=9.23
+2022-04-26 15:45:05,504 35096 [INFO] Iter=45, Swarm=0, max=207.45, avg=41.96, min=12.99, std=29.57
+2022-04-26 15:45:27,710 35096 [INFO] Iter=45, Swarm=1, max=81.14, avg=29.25, min=16.03, std=10.84
+2022-04-26 15:45:41,361 35096 [INFO] Iter=45, Swarm=2, max=32.40, avg=8.89, min=3.10, std=5.32
+2022-04-26 15:46:09,815 35096 [INFO] Iter=46, Swarm=0, max=135.01, avg=22.92, min=7.84, std=19.08
+2022-04-26 15:46:23,056 35096 [INFO] Iter=46, Swarm=1, max=34.40, avg=14.77, min=8.59, std=4.42
+2022-04-26 15:46:37,113 35096 [INFO] Iter=46, Swarm=2, max=52.56, avg=13.66, min=6.71, std=5.64
+2022-04-26 15:47:13,095 35096 [INFO] Iter=47, Swarm=0, max=143.95, avg=30.44, min=4.81, std=27.01
+2022-04-26 15:47:32,782 35096 [INFO] Iter=47, Swarm=1, max=61.36, avg=18.97, min=9.95, std=8.92
+2022-04-26 15:47:57,861 35096 [INFO] Iter=47, Swarm=2, max=182.45, avg=31.25, min=11.94, std=17.87
+2022-04-26 15:48:40,166 35096 [INFO] Iter=48, Swarm=0, max=182.25, avg=33.10, min=10.02, std=25.84
+2022-04-26 15:48:58,084 35096 [INFO] Iter=48, Swarm=1, max=55.32, avg=24.34, min=12.12, std=6.78
+2022-04-26 15:49:28,354 35096 [INFO] Iter=48, Swarm=2, max=167.05, avg=35.47, min=12.96, std=20.34
+2022-04-26 15:50:10,198 35096 [INFO] Iter=49, Swarm=0, max=173.42, avg=38.72, min=11.63, std=29.73
+2022-04-26 15:50:35,382 35096 [INFO] Iter=49, Swarm=1, max=74.62, avg=32.65, min=13.29, std=11.42
+2022-04-26 15:51:02,272 35096 [INFO] Iter=49, Swarm=2, max=138.52, avg=29.34, min=10.14, std=14.93
+2022-04-26 15:52:25,852 35096 [INFO] Iter=50, Swarm=0, max=390.92, avg=62.04, min=13.30, std=64.71
+2022-04-26 15:52:41,973 35096 [INFO] Iter=50, Swarm=1, max=34.86, avg=13.35, min=5.95, std=6.47
+2022-04-26 15:53:10,731 35096 [INFO] Iter=50, Swarm=2, max=110.47, avg=22.39, min=6.15, std=15.98
+2022-04-26 15:53:54,021 35096 [INFO] Iter=51, Swarm=0, max=170.96, avg=40.08, min=10.80, std=31.75
+2022-04-26 15:54:25,461 35096 [INFO] Iter=51, Swarm=1, max=89.55, avg=32.03, min=9.42, std=13.77
+2022-04-26 15:54:48,756 35096 [INFO] Iter=51, Swarm=2, max=113.74, avg=18.99, min=6.51, std=13.86
+2022-04-26 15:55:32,119 35096 [INFO] Iter=52, Swarm=0, max=154.63, avg=34.59, min=4.64, std=30.18
+2022-04-26 15:55:56,547 35096 [INFO] Iter=52, Swarm=1, max=107.70, avg=11.16, min=2.97, std=10.21
+2022-04-26 15:56:32,433 35096 [INFO] Iter=52, Swarm=2, max=147.69, avg=34.05, min=6.76, std=24.10
+2022-04-26 15:57:11,764 35096 [INFO] Iter=53, Swarm=0, max=151.88, avg=30.14, min=5.46, std=22.55
+2022-04-26 15:57:27,334 35096 [INFO] Iter=53, Swarm=1, max=59.17, avg=15.44, min=6.03, std=9.20
+2022-04-26 15:58:04,110 35096 [INFO] Iter=53, Swarm=2, max=182.07, avg=32.46, min=9.15, std=25.14
+2022-04-26 15:58:53,048 35096 [INFO] Iter=54, Swarm=0, max=181.41, avg=42.45, min=8.06, std=34.72
+2022-04-26 15:59:19,412 35096 [INFO] Iter=54, Swarm=1, max=99.03, avg=24.28, min=5.76, std=12.09
+2022-04-26 15:59:50,708 35096 [INFO] Iter=54, Swarm=2, max=171.59, avg=27.72, min=6.91, std=17.60
+2022-04-26 16:00:46,412 35096 [INFO] Iter=55, Swarm=0, max=210.46, avg=50.80, min=11.42, std=42.54
+2022-04-26 16:01:10,067 35096 [INFO] Iter=55, Swarm=1, max=80.49, avg=28.11, min=8.65, std=11.99
+2022-04-26 16:01:32,856 35096 [INFO] Iter=55, Swarm=2, max=150.76, avg=22.58, min=5.49, std=14.43
+2022-04-26 16:02:42,430 35096 [INFO] Iter=56, Swarm=0, max=257.19, avg=62.57, min=18.92, std=46.94
+2022-04-26 16:03:09,499 35096 [INFO] Iter=56, Swarm=1, max=101.04, avg=27.94, min=10.51, std=11.72
+2022-04-26 16:03:25,562 35096 [INFO] Iter=56, Swarm=2, max=61.42, avg=13.60, min=4.53, std=8.52
+2022-04-26 16:04:22,213 35096 [INFO] Iter=57, Swarm=0, max=253.79, avg=53.96, min=19.49, std=35.88
+2022-04-26 16:04:45,784 35096 [INFO] Iter=57, Swarm=1, max=100.25, avg=26.04, min=8.94, std=11.66
+2022-04-26 16:05:16,653 35096 [INFO] Iter=57, Swarm=2, max=106.05, avg=29.13, min=8.01, std=16.04
+2022-04-26 16:05:58,904 35096 [INFO] Iter=58, Swarm=0, max=168.37, avg=31.59, min=5.46, std=27.91
+2022-04-26 16:06:24,112 35096 [INFO] Iter=58, Swarm=1, max=111.86, avg=37.29, min=12.56, std=17.30
+2022-04-26 16:06:55,779 35096 [INFO] Iter=58, Swarm=2, max=142.66, avg=26.04, min=7.28, std=16.34
+2022-04-26 16:07:42,163 35096 [INFO] Iter=59, Swarm=0, max=161.39, avg=43.53, min=9.76, std=30.04
+2022-04-26 16:08:09,369 35096 [INFO] Iter=59, Swarm=1, max=146.67, avg=28.52, min=10.39, std=18.66
+2022-04-26 16:09:00,531 35096 [INFO] Iter=59, Swarm=2, max=194.64, avg=39.66, min=9.91, std=31.53
+2022-04-26 16:09:48,140 35096 [INFO] Iter=60, Swarm=0, max=174.19, avg=38.97, min=4.88, std=32.03
+2022-04-26 16:10:16,952 35096 [INFO] Iter=60, Swarm=1, max=110.99, avg=30.91, min=6.07, std=14.66
+2022-04-26 16:10:53,194 35096 [INFO] Iter=60, Swarm=2, max=145.82, avg=29.78, min=11.48, std=20.84
+2022-04-26 16:11:13,780 35096 [INFO] Iter=61, Swarm=0, max=85.81, avg=18.95, min=6.50, std=12.34
+2022-04-26 16:11:42,144 35096 [INFO] Iter=61, Swarm=1, max=127.49, avg=33.67, min=14.27, std=17.46
+2022-04-26 16:12:20,812 35096 [INFO] Iter=61, Swarm=2, max=150.94, avg=35.41, min=10.02, std=24.41
+2022-04-26 16:13:17,040 35096 [INFO] Iter=62, Swarm=0, max=219.62, avg=52.46, min=7.72, std=42.53
+2022-04-26 16:13:38,069 35096 [INFO] Iter=62, Swarm=1, max=99.53, avg=23.21, min=9.61, std=12.48
+2022-04-26 16:14:26,563 35096 [INFO] Iter=62, Swarm=2, max=234.84, avg=40.33, min=9.22, std=38.93
+2022-04-26 16:15:30,424 35096 [INFO] Iter=63, Swarm=0, max=260.63, avg=66.68, min=17.78, std=49.52
+2022-04-26 16:16:08,458 35096 [INFO] Iter=63, Swarm=1, max=170.32, avg=45.34, min=20.28, std=20.34
+2022-04-26 16:16:53,052 35096 [INFO] Iter=63, Swarm=2, max=219.23, avg=42.80, min=12.35, std=35.99
+2022-04-26 16:17:47,785 35096 [INFO] Iter=64, Swarm=0, max=193.10, avg=50.06, min=10.90, std=37.42
+2022-04-26 16:18:18,841 35096 [INFO] Iter=64, Swarm=1, max=139.22, avg=29.19, min=6.30, std=21.65
+2022-04-26 16:19:09,148 35096 [INFO] Iter=64, Swarm=2, max=239.21, avg=44.90, min=11.41, std=35.04
+2022-04-26 16:19:51,481 35096 [INFO] Iter=65, Swarm=0, max=141.40, avg=38.91, min=8.28, std=28.85
+2022-04-26 16:20:32,271 35096 [INFO] Iter=65, Swarm=1, max=164.63, avg=39.37, min=10.21, std=27.88
+2022-04-26 16:21:31,355 35096 [INFO] Iter=65, Swarm=2, max=247.44, avg=53.35, min=11.79, std=40.12
+2022-04-26 16:22:24,973 35096 [INFO] Iter=66, Swarm=0, max=168.14, avg=47.70, min=7.83, std=34.18
+2022-04-26 16:23:02,528 35096 [INFO] Iter=66, Swarm=1, max=153.75, avg=38.09, min=8.56, std=22.91
+2022-04-26 16:23:58,840 35096 [INFO] Iter=66, Swarm=2, max=222.56, avg=51.67, min=10.30, std=42.02
+2022-04-26 16:25:10,466 35096 [INFO] Iter=67, Swarm=0, max=254.89, avg=66.54, min=10.59, std=49.32
+2022-04-26 16:25:49,420 35096 [INFO] Iter=67, Swarm=1, max=186.59, avg=37.80, min=9.94, std=27.99
+2022-04-26 16:26:32,234 35096 [INFO] Iter=67, Swarm=2, max=193.11, avg=44.19, min=15.93, std=26.36
+2022-04-26 16:27:42,707 35096 [INFO] Iter=68, Swarm=0, max=280.92, avg=67.39, min=16.19, std=48.36
+2022-04-26 16:28:21,886 35096 [INFO] Iter=68, Swarm=1, max=180.68, avg=42.34, min=9.16, std=25.26
+2022-04-26 16:28:58,485 35096 [INFO] Iter=68, Swarm=2, max=170.14, avg=29.25, min=6.50, std=20.19
+2022-04-26 16:30:11,128 35096 [INFO] Iter=69, Swarm=0, max=272.28, avg=65.95, min=13.45, std=48.32
+2022-04-26 16:31:11,551 35096 [INFO] Iter=69, Swarm=1, max=302.30, avg=58.92, min=11.84, std=46.31
+2022-04-26 16:32:08,786 35096 [INFO] Iter=69, Swarm=2, max=216.45, avg=47.87, min=8.02, std=38.76
+2022-04-26 16:33:03,276 35096 [INFO] Iter=70, Swarm=0, max=172.43, avg=43.33, min=9.47, std=31.58
+2022-04-26 16:33:51,527 35096 [INFO] Iter=70, Swarm=1, max=182.99, avg=45.99, min=14.38, std=28.85
+2022-04-26 16:34:38,488 35096 [INFO] Iter=70, Swarm=2, max=166.64, avg=39.78, min=9.16, std=29.14
+2022-04-26 16:35:46,316 35096 [INFO] Iter=71, Swarm=0, max=205.88, avg=54.88, min=6.13, std=42.37
+2022-04-26 16:36:38,214 35096 [INFO] Iter=71, Swarm=1, max=252.45, avg=51.27, min=13.24, std=40.04
+2022-04-26 16:37:20,107 35096 [INFO] Iter=71, Swarm=2, max=121.40, avg=36.80, min=8.36, std=23.64
+2022-04-26 16:38:17,593 35096 [INFO] Iter=72, Swarm=0, max=191.22, avg=52.27, min=9.79, std=42.01
+2022-04-26 16:39:15,790 35096 [INFO] Iter=72, Swarm=1, max=228.26, avg=49.02, min=10.35, std=38.55
+2022-04-26 16:40:23,945 35096 [INFO] Iter=72, Swarm=2, max=265.95, avg=61.98, min=16.13, std=54.15
+2022-04-26 16:41:13,312 35096 [INFO] Iter=73, Swarm=0, max=156.43, avg=41.59, min=9.24, std=29.98
+2022-04-26 16:42:14,472 35096 [INFO] Iter=73, Swarm=1, max=256.37, avg=55.71, min=7.73, std=42.68
+2022-04-26 16:43:35,296 35096 [INFO] Iter=73, Swarm=2, max=309.93, avg=70.80, min=13.94, std=60.71
+2022-04-26 16:44:43,820 35096 [INFO] Iter=74, Swarm=0, max=232.46, avg=61.94, min=12.34, std=44.41
+2022-04-26 16:45:36,648 35096 [INFO] Iter=74, Swarm=1, max=228.93, avg=45.98, min=8.74, std=37.74
+2022-04-26 16:46:48,881 35096 [INFO] Iter=74, Swarm=2, max=266.96, avg=56.66, min=10.65, std=51.32
+2022-04-26 16:48:00,122 35096 [INFO] Iter=75, Swarm=0, max=230.42, avg=64.27, min=14.03, std=49.81
+2022-04-26 16:48:46,331 35096 [INFO] Iter=75, Swarm=1, max=224.05, avg=51.81, min=12.37, std=32.27
+2022-04-26 16:49:14,240 35096 [INFO] Iter=75, Swarm=2, max=102.84, avg=26.96, min=7.09, std=15.17
+2022-04-26 16:49:56,444 35096 [INFO] Iter=76, Swarm=0, max=173.78, avg=38.12, min=11.33, std=26.34
+2022-04-26 16:50:58,183 35096 [INFO] Iter=76, Swarm=1, max=314.45, avg=59.29, min=15.09, std=49.00
+2022-04-26 16:52:05,642 35096 [INFO] Iter=76, Swarm=2, max=231.85, avg=65.78, min=13.17, std=43.61
+2022-04-26 16:53:14,496 35096 [INFO] Iter=77, Swarm=0, max=210.25, avg=56.07, min=12.70, std=38.50
+2022-04-26 16:54:03,693 35096 [INFO] Iter=77, Swarm=1, max=206.46, avg=48.16, min=7.85, std=37.04
+2022-04-26 16:55:32,920 35096 [INFO] Iter=77, Swarm=2, max=257.83, avg=77.52, min=16.51, std=57.43
+2022-04-26 16:56:41,461 35096 [INFO] Iter=78, Swarm=0, max=231.41, avg=58.44, min=13.11, std=42.33
+2022-04-26 16:57:34,221 35096 [INFO] Iter=78, Swarm=1, max=204.89, avg=54.96, min=15.25, std=36.04
+2022-04-26 16:58:36,986 35096 [INFO] Iter=78, Swarm=2, max=195.54, avg=53.12, min=12.67, std=38.46
+2022-04-26 16:59:23,720 35096 [INFO] Iter=79, Swarm=0, max=147.73, avg=44.50, min=5.37, std=26.23
+2022-04-26 16:59:58,529 35096 [INFO] Iter=79, Swarm=1, max=148.79, avg=35.21, min=9.71, std=21.33
+2022-04-26 17:01:02,188 35096 [INFO] Iter=79, Swarm=2, max=249.40, avg=60.06, min=6.41, std=46.54
+2022-04-26 17:02:00,109 35096 [INFO] Iter=80, Swarm=0, max=222.57, avg=63.34, min=13.61, std=40.67
+2022-04-26 17:03:13,819 35096 [INFO] Iter=80, Swarm=1, max=279.71, avg=74.24, min=18.36, std=53.71
+2022-04-26 17:04:15,746 35096 [INFO] Iter=80, Swarm=2, max=213.11, avg=58.25, min=11.00, std=36.41
+2022-04-26 17:05:21,841 35096 [INFO] Iter=81, Swarm=0, max=221.06, avg=58.39, min=10.04, std=42.67
+2022-04-26 17:06:12,269 35096 [INFO] Iter=81, Swarm=1, max=218.39, avg=54.98, min=10.88, std=42.96
+2022-04-26 17:07:19,760 35096 [INFO] Iter=81, Swarm=2, max=230.72, avg=53.54, min=5.59, std=44.78
+2022-04-26 17:08:25,793 35096 [INFO] Iter=82, Swarm=0, max=229.39, avg=62.03, min=14.86, std=42.10
+2022-04-26 17:09:05,064 35096 [INFO] Iter=82, Swarm=1, max=174.37, avg=41.65, min=11.46, std=28.90
+2022-04-26 17:10:10,917 35096 [INFO] Iter=82, Swarm=2, max=205.16, avg=58.31, min=10.81, std=44.39
+2022-04-26 17:10:49,143 35096 [INFO] Iter=83, Swarm=0, max=113.67, avg=42.05, min=13.10, std=18.30
+2022-04-26 17:11:26,497 35096 [INFO] Iter=83, Swarm=1, max=126.55, avg=37.57, min=6.33, std=26.14
+2022-04-26 17:12:10,186 35096 [INFO] Iter=83, Swarm=2, max=138.37, avg=40.21, min=9.74, std=25.14
+2022-04-26 17:13:19,369 35096 [INFO] Iter=84, Swarm=0, max=235.79, avg=66.49, min=10.57, std=43.96
+2022-04-26 17:14:03,623 35096 [INFO] Iter=84, Swarm=1, max=173.30, avg=55.00, min=15.43, std=34.09
+2022-04-26 17:15:31,962 35096 [INFO] Iter=84, Swarm=2, max=304.51, avg=81.59, min=18.08, std=57.21
+2022-04-26 17:16:53,237 35096 [INFO] Iter=85, Swarm=0, max=290.50, avg=75.61, min=10.33, std=52.87
+2022-04-26 17:17:29,735 35096 [INFO] Iter=85, Swarm=1, max=138.31, avg=35.13, min=7.74, std=26.08
+2022-04-26 17:18:09,225 35096 [INFO] Iter=85, Swarm=2, max=141.29, avg=35.41, min=5.42, std=24.04
+2022-04-26 17:19:24,573 35096 [INFO] Iter=86, Swarm=0, max=229.86, avg=76.88, min=15.21, std=48.46
+2022-04-26 17:20:08,675 35096 [INFO] Iter=86, Swarm=1, max=154.69, avg=42.35, min=5.79, std=32.84
+2022-04-26 17:21:32,120 35096 [INFO] Iter=86, Swarm=2, max=276.28, avg=76.41, min=16.41, std=51.69
+2022-04-26 17:22:49,226 35096 [INFO] Iter=87, Swarm=0, max=244.93, avg=61.23, min=7.99, std=49.19
+2022-04-26 17:23:22,990 35096 [INFO] Iter=87, Swarm=1, max=136.08, avg=30.09, min=7.21, std=22.72
+2022-04-26 17:24:29,256 35096 [INFO] Iter=87, Swarm=2, max=229.36, avg=60.17, min=14.04, std=43.37
+2022-04-26 17:25:34,336 35096 [INFO] Iter=88, Swarm=0, max=220.31, avg=63.05, min=12.35, std=42.46
+2022-04-26 17:26:27,549 35096 [INFO] Iter=88, Swarm=1, max=226.01, avg=48.63, min=4.99, std=43.14
+2022-04-26 17:27:34,793 35096 [INFO] Iter=88, Swarm=2, max=231.89, avg=62.35, min=9.72, std=43.47
+2022-04-26 17:28:33,928 35096 [INFO] Iter=89, Swarm=0, max=174.85, avg=49.87, min=12.20, std=34.56
+2022-04-26 17:29:29,865 35096 [INFO] Iter=89, Swarm=1, max=206.21, avg=64.12, min=16.54, std=41.36
+2022-04-26 17:30:11,483 35096 [INFO] Iter=89, Swarm=2, max=150.81, avg=35.96, min=6.06, std=28.78
+2022-04-26 17:31:30,198 35096 [INFO] Iter=90, Swarm=0, max=271.46, avg=80.08, min=12.22, std=58.54
+2022-04-26 17:32:16,570 35096 [INFO] Iter=90, Swarm=1, max=216.68, avg=54.32, min=15.51, std=30.19
+2022-04-26 17:33:19,617 35096 [INFO] Iter=90, Swarm=2, max=217.47, avg=55.32, min=12.47, std=38.49
+2022-04-26 17:34:24,548 35096 [INFO] Iter=91, Swarm=0, max=254.60, avg=67.82, min=13.90, std=43.65
+2022-04-26 17:35:25,166 35096 [INFO] Iter=91, Swarm=1, max=222.26, avg=64.06, min=13.62, std=48.01
+2022-04-26 17:36:19,636 35096 [INFO] Iter=91, Swarm=2, max=169.84, avg=54.87, min=12.05, std=33.47
+2022-04-26 17:37:41,899 35096 [INFO] Iter=92, Swarm=0, max=338.19, avg=82.97, min=19.98, std=59.25
+2022-04-26 17:38:39,408 35096 [INFO] Iter=92, Swarm=1, max=233.32, avg=68.95, min=14.10, std=46.96
+2022-04-26 17:39:45,126 35096 [INFO] Iter=92, Swarm=2, max=253.47, avg=63.15, min=12.57, std=42.27
+2022-04-26 17:41:06,713 35096 [INFO] Iter=93, Swarm=0, max=324.94, avg=82.91, min=15.70, std=58.13
+2022-04-26 17:42:14,340 35096 [INFO] Iter=93, Swarm=1, max=228.36, avg=64.15, min=13.02, std=47.14
+2022-04-26 17:43:23,597 35096 [INFO] Iter=93, Swarm=2, max=220.10, avg=68.86, min=9.76, std=45.39
+2022-04-26 17:44:11,745 35096 [INFO] Iter=94, Swarm=0, max=146.09, avg=43.27, min=8.91, std=25.81
+2022-04-26 17:45:09,384 35096 [INFO] Iter=94, Swarm=1, max=220.71, avg=64.44, min=17.58, std=39.61
+2022-04-26 17:46:21,128 35096 [INFO] Iter=94, Swarm=2, max=254.71, avg=71.34, min=10.51, std=48.23
+2022-04-26 17:47:36,684 35096 [INFO] Iter=95, Swarm=0, max=230.30, avg=67.28, min=13.11, std=46.05
+2022-04-26 17:48:42,353 35096 [INFO] Iter=95, Swarm=1, max=236.79, avg=68.39, min=8.53, std=42.83
+2022-04-26 17:49:49,912 35096 [INFO] Iter=95, Swarm=2, max=257.57, avg=65.91, min=8.93, std=44.75
+2022-04-26 17:50:56,054 35096 [INFO] Iter=96, Swarm=0, max=266.21, avg=67.67, min=12.92, std=41.97
+2022-04-26 17:51:40,468 35096 [INFO] Iter=96, Swarm=1, max=189.17, avg=46.66, min=6.63, std=28.72
+2022-04-26 17:52:34,469 35096 [INFO] Iter=96, Swarm=2, max=164.49, avg=52.94, min=10.65, std=29.83
+2022-04-26 17:53:42,434 35096 [INFO] Iter=97, Swarm=0, max=219.45, avg=70.05, min=16.86, std=46.03
+2022-04-26 17:54:31,420 35096 [INFO] Iter=97, Swarm=1, max=175.40, avg=49.82, min=7.85, std=35.19
+2022-04-26 17:55:48,317 35096 [INFO] Iter=97, Swarm=2, max=269.61, avg=75.58, min=11.81, std=54.07
+2022-04-26 17:56:54,582 35096 [INFO] Iter=98, Swarm=0, max=234.98, avg=72.27, min=18.53, std=42.30
+2022-04-26 17:57:46,666 35096 [INFO] Iter=98, Swarm=1, max=153.83, avg=53.50, min=11.83, std=30.31
+2022-04-26 17:59:16,812 35096 [INFO] Iter=98, Swarm=2, max=298.65, avg=85.82, min=11.44, std=64.17
+2022-04-26 18:00:05,639 35096 [INFO] Iter=99, Swarm=0, max=174.19, avg=47.31, min=8.77, std=33.73
+2022-04-26 18:01:06,183 35096 [INFO] Iter=99, Swarm=1, max=221.03, avg=63.98, min=10.79, std=41.64
+2022-04-26 18:01:58,444 35096 [INFO] Iter=99, Swarm=2, max=212.99, avg=48.62, min=7.94, std=35.93
+2022-04-26 18:02:32,974 35096 [INFO] Iter=100, Swarm=0, max=109.31, avg=35.81, min=9.17, std=17.71
+2022-04-26 18:03:47,334 35096 [INFO] Iter=100, Swarm=1, max=265.17, avg=79.37, min=17.32, std=57.18
+2022-04-26 18:04:38,655 35096 [INFO] Iter=100, Swarm=2, max=161.72, avg=47.77, min=8.15, std=33.79
+2022-04-26 18:05:15,494 35096 [INFO] Iter=101, Swarm=0, max=95.01, avg=30.94, min=5.97, std=19.14
+2022-04-26 18:06:19,023 35096 [INFO] Iter=101, Swarm=1, max=262.15, avg=70.16, min=13.27, std=51.91
+2022-04-26 18:07:10,867 35096 [INFO] Iter=101, Swarm=2, max=185.84, avg=49.29, min=8.84, std=36.90
+2022-04-26 18:08:17,010 35096 [INFO] Iter=102, Swarm=0, max=223.55, avg=65.02, min=11.30, std=42.13
+2022-04-26 18:09:23,764 35096 [INFO] Iter=102, Swarm=1, max=216.08, avg=70.42, min=10.99, std=48.44
+2022-04-26 18:10:45,852 35096 [INFO] Iter=102, Swarm=2, max=297.37, avg=91.35, min=11.86, std=60.51
+2022-04-26 18:11:42,027 35096 [INFO] Iter=103, Swarm=0, max=180.20, avg=55.83, min=6.69, std=34.07
+2022-04-26 18:12:41,809 35096 [INFO] Iter=103, Swarm=1, max=239.26, avg=66.09, min=8.51, std=47.36
+2022-04-26 18:13:57,865 35096 [INFO] Iter=103, Swarm=2, max=313.70, avg=75.15, min=14.56, std=58.85
+2022-04-26 18:15:00,668 35096 [INFO] Iter=104, Swarm=0, max=190.05, avg=61.67, min=11.16, std=40.64
+2022-04-26 18:15:39,914 35096 [INFO] Iter=104, Swarm=1, max=144.99, avg=41.78, min=10.48, std=27.27
+2022-04-26 18:16:45,009 35096 [INFO] Iter=104, Swarm=2, max=246.55, avg=68.10, min=10.74, std=51.33
+2022-04-26 18:18:16,483 35096 [INFO] Iter=105, Swarm=0, max=390.09, avg=91.04, min=13.67, std=61.31
+2022-04-26 18:19:02,325 35096 [INFO] Iter=105, Swarm=1, max=175.44, avg=52.19, min=11.51, std=32.01
+2022-04-26 18:20:09,373 35096 [INFO] Iter=105, Swarm=2, max=228.23, avg=79.31, min=15.03, std=48.63
+2022-04-26 18:20:59,384 35096 [INFO] Iter=106, Swarm=0, max=193.13, avg=52.39, min=14.17, std=28.43
+2022-04-26 18:22:05,725 35096 [INFO] Iter=106, Swarm=1, max=217.14, avg=75.94, min=19.37, std=50.50
+2022-04-26 18:23:30,458 35096 [INFO] Iter=106, Swarm=2, max=326.09, avg=89.55, min=11.25, std=63.01
+2022-04-26 18:24:33,243 35096 [INFO] Iter=107, Swarm=0, max=193.14, avg=61.89, min=13.16, std=35.61
+2022-04-26 18:25:37,998 35096 [INFO] Iter=107, Swarm=1, max=226.54, avg=77.66, min=10.60, std=51.22
+2022-04-26 18:26:50,810 35096 [INFO] Iter=107, Swarm=2, max=230.84, avg=74.87, min=11.66, std=44.00
+2022-04-26 18:28:26,138 35096 [INFO] Iter=108, Swarm=0, max=277.10, avg=88.40, min=17.35, std=62.07
+2022-04-26 18:29:43,614 35096 [INFO] Iter=108, Swarm=1, max=219.05, avg=76.71, min=6.49, std=45.79
+2022-04-26 18:30:56,726 35096 [INFO] Iter=108, Swarm=2, max=230.68, avg=73.77, min=9.08, std=39.27
+2022-04-26 18:31:46,872 35096 [INFO] Iter=109, Swarm=0, max=144.00, avg=50.26, min=12.74, std=26.32
+2022-04-26 18:32:43,989 35096 [INFO] Iter=109, Swarm=1, max=199.75, avg=66.75, min=11.38, std=38.31
+2022-04-26 18:33:43,166 35096 [INFO] Iter=109, Swarm=2, max=174.02, avg=51.41, min=9.46, std=33.84
+2022-04-26 18:34:45,564 35096 [INFO] Iter=110, Swarm=0, max=172.82, avg=60.37, min=15.12, std=33.57
+2022-04-26 18:36:02,809 35096 [INFO] Iter=110, Swarm=1, max=265.49, avg=80.33, min=7.18, std=50.88
+2022-04-26 18:36:56,783 35096 [INFO] Iter=110, Swarm=2, max=148.49, avg=48.92, min=9.33, std=30.20
+2022-04-26 18:38:18,252 35096 [INFO] Iter=111, Swarm=0, max=245.71, avg=76.40, min=10.20, std=47.50
+2022-04-26 18:39:22,582 35096 [INFO] Iter=111, Swarm=1, max=196.75, avg=81.56, min=22.52, std=42.24
+2022-04-26 18:40:35,325 35096 [INFO] Iter=111, Swarm=2, max=232.63, avg=69.46, min=11.86, std=43.66
+2022-04-26 18:41:36,436 35096 [INFO] Iter=112, Swarm=0, max=170.93, avg=58.31, min=15.16, std=33.40
+2022-04-26 18:42:31,931 35096 [INFO] Iter=112, Swarm=1, max=155.40, avg=57.17, min=16.61, std=31.40
+2022-04-26 18:43:52,716 35096 [INFO] Iter=112, Swarm=2, max=275.21, avg=86.29, min=14.83, std=52.84
+2022-04-26 18:44:47,365 35096 [INFO] Iter=113, Swarm=0, max=161.68, avg=49.52, min=11.92, std=32.51
+2022-04-26 18:46:13,531 35096 [INFO] Iter=113, Swarm=1, max=259.71, avg=96.01, min=16.37, std=57.43
+2022-04-26 18:47:23,367 35096 [INFO] Iter=113, Swarm=2, max=229.55, avg=69.75, min=15.75, std=46.62
+2022-04-26 18:48:55,859 35096 [INFO] Iter=114, Swarm=0, max=262.03, avg=84.50, min=11.04, std=54.07
+2022-04-26 18:49:54,553 35096 [INFO] Iter=114, Swarm=1, max=191.55, avg=72.77, min=10.14, std=43.88
+2022-04-26 18:51:05,554 35096 [INFO] Iter=114, Swarm=2, max=215.59, avg=75.71, min=12.47, std=47.21
+2022-04-26 18:51:59,361 35096 [INFO] Iter=115, Swarm=0, max=197.29, avg=51.59, min=13.68, std=31.47
+2022-04-26 18:53:00,816 35096 [INFO] Iter=115, Swarm=1, max=234.71, avg=77.54, min=14.07, std=46.06
+2022-04-26 18:54:09,652 35096 [INFO] Iter=115, Swarm=2, max=265.61, avg=73.73, min=16.77, std=46.94
+2022-04-26 18:55:40,955 35096 [INFO] Iter=116, Swarm=0, max=310.71, avg=102.92, min=22.86, std=63.81
+2022-04-26 18:56:29,521 35096 [INFO] Iter=116, Swarm=1, max=158.73, avg=57.02, min=8.91, std=34.47
+2022-04-26 18:57:54,883 35096 [INFO] Iter=116, Swarm=2, max=268.16, avg=90.97, min=9.23, std=55.18
+2022-04-26 18:58:54,019 35096 [INFO] Iter=117, Swarm=0, max=183.13, avg=60.01, min=7.95, std=32.39
+2022-04-26 18:59:51,740 35096 [INFO] Iter=117, Swarm=1, max=219.98, avg=68.60, min=10.50, std=42.93
+2022-04-26 19:01:02,249 35096 [INFO] Iter=117, Swarm=2, max=260.27, avg=73.65, min=10.13, std=48.43
+2022-04-26 19:02:05,067 35096 [INFO] Iter=118, Swarm=0, max=191.31, avg=64.48, min=8.30, std=39.11
+2022-04-26 19:03:06,810 35096 [INFO] Iter=118, Swarm=1, max=211.70, avg=65.85, min=17.18, std=39.05
+2022-04-26 19:03:59,963 35096 [INFO] Iter=118, Swarm=2, max=191.83, avg=62.89, min=11.84, std=37.73
+2022-04-26 19:05:15,749 35096 [INFO] Iter=119, Swarm=0, max=319.99, avg=78.75, min=13.28, std=53.28
+2022-04-26 19:06:10,381 35096 [INFO] Iter=119, Swarm=1, max=194.27, avg=67.01, min=19.92, std=35.34
+2022-04-26 19:07:05,202 35096 [INFO] Iter=119, Swarm=2, max=199.45, avg=61.55, min=9.68, std=39.59
+2022-04-26 19:08:13,050 35096 [INFO] Iter=120, Swarm=0, max=185.23, avg=72.21, min=21.15, std=36.69
+2022-04-26 19:09:15,306 35096 [INFO] Iter=120, Swarm=1, max=212.16, avg=66.45, min=12.08, std=43.23
+2022-04-26 19:10:24,531 35096 [INFO] Iter=120, Swarm=2, max=199.49, avg=70.18, min=13.18, std=37.90
+2022-04-26 19:11:49,885 35096 [INFO] Iter=121, Swarm=0, max=210.41, avg=77.46, min=16.12, std=42.26
+2022-04-26 19:12:57,299 35096 [INFO] Iter=121, Swarm=1, max=190.27, avg=76.67, min=14.50, std=42.60
+2022-04-26 19:13:33,249 35096 [INFO] Iter=121, Swarm=2, max=103.67, avg=30.37, min=3.73, std=20.84
+2022-04-26 19:14:52,836 35096 [INFO] Iter=122, Swarm=0, max=270.17, avg=86.78, min=16.50, std=41.76
+2022-04-26 19:16:12,009 35096 [INFO] Iter=122, Swarm=1, max=264.83, avg=93.67, min=23.28, std=55.58
+2022-04-26 19:16:54,615 35096 [INFO] Iter=122, Swarm=2, max=120.16, avg=46.16, min=8.31, std=24.65
+2022-04-26 19:17:29,264 35096 [INFO] Iter=123, Swarm=0, max=125.71, avg=36.59, min=8.50, std=20.88
+2022-04-26 19:18:40,270 35096 [INFO] Iter=123, Swarm=1, max=249.58, avg=68.50, min=11.34, std=46.75
+2022-04-26 19:19:26,574 35096 [INFO] Iter=123, Swarm=2, max=127.80, avg=42.62, min=12.88, std=23.11
+2022-04-26 19:20:43,948 35096 [INFO] Iter=124, Swarm=0, max=236.13, avg=77.19, min=12.40, std=46.83
+2022-04-26 19:21:59,465 35096 [INFO] Iter=124, Swarm=1, max=241.10, avg=87.97, min=19.61, std=55.27
+2022-04-26 19:22:38,800 35096 [INFO] Iter=124, Swarm=2, max=129.12, avg=38.47, min=8.41, std=22.33
+2022-04-26 19:23:51,506 35096 [INFO] Iter=125, Swarm=0, max=236.85, avg=69.78, min=9.02, std=44.14
+2022-04-26 19:24:46,897 35096 [INFO] Iter=125, Swarm=1, max=137.62, avg=58.92, min=19.74, std=30.99
+2022-04-26 19:26:34,787 35096 [INFO] Iter=125, Swarm=2, max=345.32, avg=107.09, min=27.62, std=57.99
+2022-04-26 19:27:58,307 35096 [INFO] Iter=126, Swarm=0, max=271.48, avg=82.00, min=18.58, std=46.09
+2022-04-26 19:29:00,833 35096 [INFO] Iter=126, Swarm=1, max=198.35, avg=78.90, min=22.30, std=45.46
+2022-04-26 19:30:15,292 35096 [INFO] Iter=126, Swarm=2, max=203.41, avg=75.00, min=17.44, std=40.19
+2022-04-26 19:31:32,367 35096 [INFO] Iter=127, Swarm=0, max=242.91, avg=63.96, min=14.46, std=36.05
+2022-04-26 19:32:55,425 35096 [INFO] Iter=127, Swarm=1, max=270.24, avg=105.20, min=25.68, std=60.80
+2022-04-26 19:34:31,753 35096 [INFO] Iter=127, Swarm=2, max=360.80, avg=115.70, min=23.19, std=77.77
+2022-04-26 19:36:05,854 35096 [INFO] Iter=128, Swarm=0, max=295.90, avg=99.65, min=16.99, std=58.29
+2022-04-26 19:37:14,143 35096 [INFO] Iter=128, Swarm=1, max=217.63, avg=84.10, min=20.10, std=49.73
+2022-04-26 19:38:11,290 35096 [INFO] Iter=128, Swarm=2, max=214.09, avg=64.60, min=17.89, std=34.97
+2022-04-26 19:39:25,295 35096 [INFO] Iter=129, Swarm=0, max=268.38, avg=87.24, min=19.97, std=47.75
+2022-04-26 19:40:45,540 35096 [INFO] Iter=129, Swarm=1, max=277.91, avg=101.56, min=12.81, std=63.86
+2022-04-26 19:42:00,076 35096 [INFO] Iter=129, Swarm=2, max=264.62, avg=82.54, min=17.17, std=49.29
+2022-04-26 19:43:01,745 35096 [INFO] Iter=130, Swarm=0, max=198.45, avg=62.97, min=15.40, std=37.27
+2022-04-26 19:44:07,783 35096 [INFO] Iter=130, Swarm=1, max=218.25, avg=78.20, min=16.76, std=43.02
+2022-04-26 19:45:06,136 35096 [INFO] Iter=130, Swarm=2, max=188.90, avg=60.43, min=8.11, std=37.78
+2022-04-26 19:46:17,774 35096 [INFO] Iter=131, Swarm=0, max=255.80, avg=80.72, min=20.37, std=45.83
+2022-04-26 19:47:33,204 35096 [INFO] Iter=131, Swarm=1, max=234.01, avg=91.03, min=21.92, std=50.56
+2022-04-26 19:48:42,191 35096 [INFO] Iter=131, Swarm=2, max=235.30, avg=74.76, min=7.05, std=40.37
+2022-04-26 19:50:14,959 35096 [INFO] Iter=132, Swarm=0, max=290.73, avg=103.47, min=14.23, std=63.31
+2022-04-26 19:51:22,826 35096 [INFO] Iter=132, Swarm=1, max=224.87, avg=78.35, min=10.16, std=49.28
+2022-04-26 19:52:57,365 35096 [INFO] Iter=132, Swarm=2, max=254.53, avg=101.69, min=16.52, std=58.96
+2022-04-26 19:53:47,513 35096 [INFO] Iter=133, Swarm=0, max=173.08, avg=53.37, min=7.35, std=31.24
+2022-04-26 19:54:52,915 35096 [INFO] Iter=133, Swarm=1, max=230.29, avg=77.76, min=17.40, std=42.02
+2022-04-26 19:55:53,975 35096 [INFO] Iter=133, Swarm=2, max=179.53, avg=65.74, min=14.12, std=33.78
+2022-04-26 19:57:05,013 35096 [INFO] Iter=134, Swarm=0, max=238.29, avg=84.89, min=5.65, std=48.60
+2022-04-26 19:58:00,226 35096 [INFO] Iter=134, Swarm=1, max=159.93, avg=59.54, min=15.31, std=34.58
+2022-04-26 19:58:59,914 35096 [INFO] Iter=134, Swarm=2, max=179.26, avg=66.31, min=9.72, std=35.61
+2022-04-26 20:00:22,245 35096 [INFO] Iter=135, Swarm=0, max=286.78, avg=94.77, min=21.80, std=53.02
+2022-04-26 20:01:27,177 35096 [INFO] Iter=135, Swarm=1, max=209.48, avg=71.76, min=12.62, std=45.74
+2022-04-26 20:02:20,228 35096 [INFO] Iter=135, Swarm=2, max=171.08, avg=60.98, min=13.69, std=33.69
+2022-04-26 20:03:05,140 35096 [INFO] Iter=136, Swarm=0, max=145.58, avg=46.69, min=7.89, std=26.97
+2022-04-26 20:04:13,939 35096 [INFO] Iter=136, Swarm=1, max=194.17, avg=78.20, min=19.87, std=41.12
+2022-04-26 20:05:44,390 35096 [INFO] Iter=136, Swarm=2, max=284.34, avg=103.77, min=17.99, std=57.40
+2022-04-26 20:07:06,871 35096 [INFO] Iter=137, Swarm=0, max=272.01, avg=89.68, min=19.71, std=52.12
+2022-04-26 20:08:21,694 35096 [INFO] Iter=137, Swarm=1, max=218.63, avg=87.24, min=10.60, std=55.34
+2022-04-26 20:09:36,426 35096 [INFO] Iter=137, Swarm=2, max=284.28, avg=84.49, min=21.13, std=52.01
+2022-04-26 20:11:17,986 35096 [INFO] Iter=138, Swarm=0, max=328.44, avg=108.04, min=22.21, std=62.65
+2022-04-26 20:12:34,006 35096 [INFO] Iter=138, Swarm=1, max=220.35, avg=84.14, min=15.50, std=49.82
+2022-04-26 20:13:41,507 35096 [INFO] Iter=138, Swarm=2, max=216.29, avg=76.13, min=13.12, std=48.03
+2022-04-26 20:14:53,737 35096 [INFO] Iter=139, Swarm=0, max=236.34, avg=84.92, min=12.28, std=48.30
+2022-04-26 20:15:46,269 35096 [INFO] Iter=139, Swarm=1, max=185.04, avg=61.38, min=14.92, std=39.85
+2022-04-26 20:17:17,938 35096 [INFO] Iter=139, Swarm=2, max=306.50, avg=110.48, min=26.49, std=61.51
+2022-04-26 20:18:50,569 35096 [INFO] Iter=140, Swarm=0, max=273.72, avg=105.04, min=22.54, std=59.36
+2022-04-26 20:19:43,843 35096 [INFO] Iter=140, Swarm=1, max=192.63, avg=72.45, min=18.94, std=33.81
+2022-04-26 20:21:10,645 35096 [INFO] Iter=140, Swarm=2, max=300.79, avg=82.92, min=14.99, std=48.68
+2022-04-26 20:22:21,742 35096 [INFO] Iter=141, Swarm=0, max=276.98, avg=84.77, min=15.90, std=46.41
+2022-04-26 20:23:41,833 35096 [INFO] Iter=141, Swarm=1, max=219.21, avg=92.42, min=13.00, std=54.07
+2022-04-26 20:24:35,426 35096 [INFO] Iter=141, Swarm=2, max=202.14, avg=62.57, min=11.49, std=37.31
+2022-04-26 20:25:36,594 35096 [INFO] Iter=142, Swarm=0, max=190.95, avg=71.88, min=13.29, std=39.17
+2022-04-26 20:26:44,038 35096 [INFO] Iter=142, Swarm=1, max=206.29, avg=73.29, min=17.15, std=44.63
+2022-04-26 20:28:06,901 35096 [INFO] Iter=142, Swarm=2, max=200.42, avg=80.18, min=16.52, std=41.25
+2022-04-26 20:29:33,638 35096 [INFO] Iter=143, Swarm=0, max=276.62, avg=96.16, min=21.05, std=53.94
+2022-04-26 20:30:54,879 35096 [INFO] Iter=143, Swarm=1, max=263.06, avg=87.48, min=12.34, std=58.04
+2022-04-26 20:32:00,721 35096 [INFO] Iter=143, Swarm=2, max=247.75, avg=73.56, min=17.37, std=38.90
+2022-04-26 20:33:05,520 35096 [INFO] Iter=144, Swarm=0, max=217.46, avg=66.77, min=10.11, std=37.77
+2022-04-26 20:34:07,280 35096 [INFO] Iter=144, Swarm=1, max=162.77, avg=60.29, min=7.66, std=37.18
+2022-04-26 20:35:57,800 35096 [INFO] Iter=144, Swarm=2, max=319.27, avg=118.32, min=17.77, std=65.27
+2022-04-26 20:37:34,578 35096 [INFO] Iter=145, Swarm=0, max=293.13, avg=102.26, min=13.95, std=61.12
+2022-04-26 20:38:19,289 35096 [INFO] Iter=145, Swarm=1, max=175.13, avg=50.28, min=15.28, std=25.13
+2022-04-26 20:40:01,873 35096 [INFO] Iter=145, Swarm=2, max=312.99, avg=117.52, min=19.96, std=71.90
+2022-04-26 20:41:26,366 35096 [INFO] Iter=146, Swarm=0, max=242.68, avg=82.35, min=20.17, std=45.66
+2022-04-26 20:43:00,204 35096 [INFO] Iter=146, Swarm=1, max=252.61, avg=97.48, min=13.56, std=57.60
+2022-04-26 20:44:55,791 35096 [INFO] Iter=146, Swarm=2, max=304.50, avg=117.54, min=11.73, std=63.29
+2022-04-26 20:46:27,129 35096 [INFO] Iter=147, Swarm=0, max=254.41, avg=97.36, min=17.49, std=52.17
+2022-04-26 20:47:21,408 35096 [INFO] Iter=147, Swarm=1, max=144.70, avg=55.57, min=11.29, std=29.84
+2022-04-26 20:48:37,277 35096 [INFO] Iter=147, Swarm=2, max=245.11, avg=88.75, min=8.66, std=49.51
+2022-04-26 20:50:28,307 35096 [INFO] Iter=148, Swarm=0, max=364.45, avg=124.78, min=22.28, std=60.46
+2022-04-26 20:51:34,279 35096 [INFO] Iter=148, Swarm=1, max=185.71, avg=72.97, min=13.48, std=38.06
+2022-04-26 20:52:40,665 35096 [INFO] Iter=148, Swarm=2, max=207.21, avg=70.92, min=8.47, std=37.21
+2022-04-26 20:54:01,635 35096 [INFO] Iter=149, Swarm=0, max=247.26, avg=89.71, min=18.71, std=44.36
+2022-04-26 20:54:59,525 35096 [INFO] Iter=149, Swarm=1, max=191.78, avg=64.28, min=17.71, std=39.29
+2022-04-26 20:56:28,637 35096 [INFO] Iter=149, Swarm=2, max=260.27, avg=91.48, min=17.53, std=48.99
+2022-04-26 20:58:09,903 35096 [INFO] Iter=150, Swarm=0, max=290.25, avg=114.52, min=17.41, std=62.70
+2022-04-26 20:59:30,510 35096 [INFO] Iter=150, Swarm=1, max=226.64, avg=96.19, min=25.89, std=47.44
+2022-04-26 21:00:35,859 35096 [INFO] Iter=150, Swarm=2, max=212.55, avg=78.96, min=16.14, std=39.46
+2022-04-26 21:01:41,992 35096 [INFO] Iter=151, Swarm=0, max=221.75, avg=82.53, min=13.44, std=43.19
+2022-04-26 21:02:53,992 35096 [INFO] Iter=151, Swarm=1, max=231.54, avg=87.68, min=21.74, std=52.44
+2022-04-26 21:04:05,280 35096 [INFO] Iter=151, Swarm=2, max=216.73, avg=81.64, min=9.55, std=46.17
+2022-04-26 21:05:09,638 35096 [INFO] Iter=152, Swarm=0, max=209.63, avg=74.35, min=14.28, std=39.94
+2022-04-26 21:06:35,933 35096 [INFO] Iter=152, Swarm=1, max=265.83, avg=99.55, min=15.47, std=60.57
+2022-04-26 21:07:39,693 35096 [INFO] Iter=152, Swarm=2, max=203.26, avg=81.15, min=20.75, std=42.36
+2022-04-26 21:09:23,437 35096 [INFO] Iter=153, Swarm=0, max=330.10, avg=133.52, min=13.47, std=74.93
+2022-04-26 21:10:34,482 35096 [INFO] Iter=153, Swarm=1, max=232.95, avg=90.25, min=16.45, std=48.87
+2022-04-26 21:11:39,693 35096 [INFO] Iter=153, Swarm=2, max=211.19, avg=87.96, min=16.30, std=46.37
+2022-04-26 21:12:54,632 35096 [INFO] Iter=154, Swarm=0, max=238.56, avg=82.49, min=12.96, std=48.87
+2022-04-26 21:13:41,267 35096 [INFO] Iter=154, Swarm=1, max=145.78, avg=46.20, min=4.55, std=32.54
+2022-04-26 21:14:44,569 35096 [INFO] Iter=154, Swarm=2, max=199.17, avg=76.64, min=18.47, std=38.89
+2022-04-26 21:15:49,916 35096 [INFO] Iter=155, Swarm=0, max=228.99, avg=78.87, min=17.14, std=44.07
+2022-04-26 21:17:16,116 35096 [INFO] Iter=155, Swarm=1, max=258.72, avg=107.62, min=24.10, std=59.63
+2022-04-26 21:18:47,443 35096 [INFO] Iter=155, Swarm=2, max=281.11, avg=109.97, min=18.99, std=66.54
+2022-04-26 21:20:03,386 35096 [INFO] Iter=156, Swarm=0, max=254.74, avg=91.59, min=11.13, std=49.50
+2022-04-26 21:21:32,742 35096 [INFO] Iter=156, Swarm=1, max=240.63, avg=97.64, min=12.18, std=56.78
+2022-04-26 21:23:01,381 35096 [INFO] Iter=156, Swarm=2, max=265.19, avg=97.54, min=14.76, std=53.95
+2022-04-26 21:24:46,971 35096 [INFO] Iter=157, Swarm=0, max=332.22, avg=115.27, min=21.36, std=62.19
+2022-04-26 21:26:01,871 35096 [INFO] Iter=157, Swarm=1, max=215.20, avg=88.22, min=10.64, std=44.73
+2022-04-26 21:27:00,204 35096 [INFO] Iter=157, Swarm=2, max=166.84, avg=61.55, min=4.39, std=34.15
+2022-04-26 21:28:24,498 35096 [INFO] Iter=158, Swarm=0, max=285.34, avg=104.20, min=7.41, std=57.47
+2022-04-26 21:29:38,441 35096 [INFO] Iter=158, Swarm=1, max=192.08, avg=85.26, min=15.43, std=44.08
+2022-04-26 21:30:30,860 35096 [INFO] Iter=158, Swarm=2, max=123.48, avg=55.40, min=11.00, std=26.90
+2022-04-26 21:31:33,521 35096 [INFO] Iter=159, Swarm=0, max=218.78, avg=82.11, min=27.28, std=39.11
+2022-04-26 21:32:48,302 35096 [INFO] Iter=159, Swarm=1, max=221.21, avg=96.95, min=21.87, std=58.19
+2022-04-26 21:33:36,468 35096 [INFO] Iter=159, Swarm=2, max=146.53, avg=55.95, min=8.54, std=31.79
+2022-04-26 21:34:28,833 35096 [INFO] Iter=160, Swarm=0, max=155.71, avg=52.59, min=16.74, std=27.91
+2022-04-26 21:35:54,082 35096 [INFO] Iter=160, Swarm=1, max=265.83, avg=92.10, min=15.31, std=56.02
+2022-04-26 21:37:32,005 35096 [INFO] Iter=160, Swarm=2, max=286.04, avg=114.57, min=19.60, std=55.77
+2022-04-26 21:38:50,051 35096 [INFO] Iter=161, Swarm=0, max=314.77, avg=101.38, min=22.98, std=56.17
+2022-04-26 21:40:15,294 35096 [INFO] Iter=161, Swarm=1, max=256.14, avg=105.25, min=25.66, std=59.18
+2022-04-26 21:41:47,765 35096 [INFO] Iter=161, Swarm=2, max=272.84, avg=106.44, min=16.88, std=63.69
+2022-04-26 21:42:58,049 35096 [INFO] Iter=162, Swarm=0, max=246.57, avg=82.28, min=16.40, std=47.51
+2022-04-26 21:43:53,249 35096 [INFO] Iter=162, Swarm=1, max=156.34, avg=67.44, min=16.53, std=34.90
+2022-04-26 21:44:32,123 35096 [INFO] Iter=162, Swarm=2, max=131.18, avg=40.85, min=5.22, std=23.95
+2022-04-26 21:46:00,516 35096 [INFO] Iter=163, Swarm=0, max=306.14, avg=110.46, min=18.65, std=61.67
+2022-04-26 21:47:06,605 35096 [INFO] Iter=163, Swarm=1, max=212.12, avg=82.00, min=11.76, std=44.00
+2022-04-26 21:48:02,330 35096 [INFO] Iter=163, Swarm=2, max=175.65, avg=69.48, min=8.98, std=36.71
+2022-04-26 21:49:37,236 35096 [INFO] Iter=164, Swarm=0, max=345.05, avg=130.66, min=20.48, std=68.64
+2022-04-26 21:50:42,838 35096 [INFO] Iter=164, Swarm=1, max=220.54, avg=88.11, min=23.25, std=48.35
+2022-04-26 21:52:04,099 35096 [INFO] Iter=164, Swarm=2, max=249.82, avg=103.42, min=7.88, std=49.13
+2022-04-26 21:53:20,352 35096 [INFO] Iter=165, Swarm=0, max=231.91, avg=94.62, min=21.30, std=48.82
+2022-04-26 21:54:16,436 35096 [INFO] Iter=165, Swarm=1, max=186.19, avg=72.82, min=21.15, std=40.85
+2022-04-26 21:55:28,017 35096 [INFO] Iter=165, Swarm=2, max=243.72, avg=92.85, min=19.90, std=48.39
+2022-04-26 21:57:07,184 35096 [INFO] Iter=166, Swarm=0, max=332.01, avg=117.55, min=19.50, std=63.06
+2022-04-26 21:58:14,359 35096 [INFO] Iter=166, Swarm=1, max=198.84, avg=78.36, min=4.91, std=46.17
+2022-04-26 21:59:23,877 35096 [INFO] Iter=166, Swarm=2, max=227.31, avg=75.84, min=7.92, std=44.88
+2022-04-26 22:00:39,813 35096 [INFO] Iter=167, Swarm=0, max=196.35, avg=86.62, min=19.57, std=43.12
+2022-04-26 22:02:06,602 35096 [INFO] Iter=167, Swarm=1, max=265.61, avg=113.24, min=28.53, std=58.33
+2022-04-26 22:03:06,629 35096 [INFO] Iter=167, Swarm=2, max=192.54, avg=75.47, min=16.70, std=39.19
+2022-04-26 22:03:59,868 35096 [INFO] Iter=168, Swarm=0, max=170.26, avg=72.52, min=16.73, std=32.87
+2022-04-26 22:05:02,911 35096 [INFO] Iter=168, Swarm=1, max=226.05, avg=93.08, min=23.62, std=46.95
+2022-04-26 22:06:16,068 35096 [INFO] Iter=168, Swarm=2, max=271.09, avg=100.42, min=20.93, std=54.56
+2022-04-26 22:07:16,033 35096 [INFO] Iter=169, Swarm=0, max=191.68, avg=73.23, min=15.36, std=39.38
+2022-04-26 22:08:37,735 35096 [INFO] Iter=169, Swarm=1, max=264.86, avg=114.49, min=28.12, std=62.26
+2022-04-26 22:09:56,669 35096 [INFO] Iter=169, Swarm=2, max=285.29, avg=114.00, min=19.78, std=62.04
+2022-04-26 22:11:11,290 35096 [INFO] Iter=170, Swarm=0, max=274.32, avg=98.80, min=29.19, std=52.52
+2022-04-26 22:12:20,842 35096 [INFO] Iter=170, Swarm=1, max=264.88, avg=99.19, min=14.16, std=57.06
+2022-04-26 22:13:13,102 35096 [INFO] Iter=170, Swarm=2, max=201.73, avg=66.23, min=10.90, std=34.92
+2022-04-26 22:14:27,953 35096 [INFO] Iter=171, Swarm=0, max=282.47, avg=102.14, min=27.58, std=53.78
+2022-04-26 22:15:29,931 35096 [INFO] Iter=171, Swarm=1, max=238.83, avg=83.26, min=8.50, std=50.49
+2022-04-26 22:17:12,534 35096 [INFO] Iter=171, Swarm=2, max=396.88, avg=142.02, min=25.69, std=84.30
+2022-04-26 22:18:31,136 35096 [INFO] Iter=172, Swarm=0, max=231.93, avg=101.89, min=15.46, std=52.54
+2022-04-26 22:19:32,110 35096 [INFO] Iter=172, Swarm=1, max=185.86, avg=90.74, min=16.68, std=42.39
+2022-04-26 22:20:38,185 35096 [INFO] Iter=172, Swarm=2, max=201.79, avg=81.41, min=10.19, std=42.06
+2022-04-26 22:22:06,083 35096 [INFO] Iter=173, Swarm=0, max=327.24, avg=116.51, min=17.09, std=59.35
+2022-04-26 22:23:34,048 35096 [INFO] Iter=173, Swarm=1, max=303.80, avg=117.52, min=24.23, std=61.68
+2022-04-26 22:25:28,464 35096 [INFO] Iter=173, Swarm=2, max=334.21, avg=117.69, min=22.11, std=70.19
+2022-04-26 22:27:37,256 35096 [INFO] Iter=174, Swarm=0, max=299.89, avg=120.45, min=22.97, std=66.30
+2022-04-26 22:29:16,314 35096 [INFO] Iter=174, Swarm=1, max=193.35, avg=87.41, min=14.55, std=46.70
+2022-04-26 22:30:44,648 35096 [INFO] Iter=174, Swarm=2, max=256.78, avg=84.15, min=19.31, std=44.50
+2022-04-26 22:31:59,276 35096 [INFO] Iter=175, Swarm=0, max=292.78, avg=113.17, min=42.12, std=52.38
+2022-04-26 22:33:00,549 35096 [INFO] Iter=175, Swarm=1, max=229.80, avg=87.71, min=18.94, std=50.53
+2022-04-26 22:34:32,526 35096 [INFO] Iter=175, Swarm=2, max=326.88, avg=117.90, min=22.10, std=69.91
+2022-04-26 22:35:50,537 35096 [INFO] Iter=176, Swarm=0, max=280.52, avg=99.08, min=16.07, std=56.03
+2022-04-26 22:36:50,674 35096 [INFO] Iter=176, Swarm=1, max=220.93, avg=93.53, min=16.42, std=47.09
+2022-04-26 22:38:19,464 35096 [INFO] Iter=176, Swarm=2, max=286.79, avg=118.12, min=16.48, std=60.89
+2022-04-26 22:39:20,208 35096 [INFO] Iter=177, Swarm=0, max=233.63, avg=78.56, min=17.02, std=47.43
+2022-04-26 22:40:26,150 35096 [INFO] Iter=177, Swarm=1, max=226.10, avg=98.00, min=17.72, std=49.52
+2022-04-26 22:41:25,994 35096 [INFO] Iter=177, Swarm=2, max=219.10, avg=77.51, min=9.77, std=39.74
+2022-04-26 22:42:34,359 35096 [INFO] Iter=178, Swarm=0, max=218.70, avg=98.00, min=20.69, std=46.43
+2022-04-26 22:43:22,534 35096 [INFO] Iter=178, Swarm=1, max=139.63, avg=58.75, min=12.53, std=36.72
+2022-04-26 22:44:33,693 35096 [INFO] Iter=178, Swarm=2, max=262.37, avg=96.70, min=24.06, std=46.67
+2022-04-26 22:45:58,593 35096 [INFO] Iter=179, Swarm=0, max=294.70, avg=115.71, min=17.39, std=63.88
+2022-04-26 22:47:11,724 35096 [INFO] Iter=179, Swarm=1, max=265.77, avg=109.67, min=20.22, std=55.54
+2022-04-26 22:48:11,201 35096 [INFO] Iter=179, Swarm=2, max=231.31, avg=83.51, min=12.84, std=45.41
+2022-04-26 22:49:35,030 35096 [INFO] Iter=180, Swarm=0, max=278.73, avg=119.93, min=23.81, std=55.61
+2022-04-26 22:51:10,285 35096 [INFO] Iter=180, Swarm=1, max=378.92, avg=145.51, min=21.27, std=85.24
+2022-04-26 22:52:27,769 35096 [INFO] Iter=180, Swarm=2, max=284.30, avg=108.68, min=22.63, std=57.07
+2022-04-26 22:53:19,301 35096 [INFO] Iter=181, Swarm=0, max=200.00, avg=70.71, min=17.35, std=40.19
+2022-04-26 22:54:02,590 35096 [INFO] Iter=181, Swarm=1, max=150.12, avg=61.95, min=11.02, std=32.55
+2022-04-26 22:55:08,011 35096 [INFO] Iter=181, Swarm=2, max=231.40, avg=86.60, min=18.16, std=47.56
+2022-04-26 22:56:29,951 35096 [INFO] Iter=182, Swarm=0, max=281.64, avg=112.63, min=21.73, std=57.67
+2022-04-26 22:57:43,445 35096 [INFO] Iter=182, Swarm=1, max=241.31, avg=104.99, min=18.33, std=62.75
+2022-04-26 22:58:50,068 35096 [INFO] Iter=182, Swarm=2, max=258.01, avg=88.83, min=14.93, std=48.24
+2022-04-26 23:00:00,102 35096 [INFO] Iter=183, Swarm=0, max=295.60, avg=102.86, min=27.32, std=56.11
+2022-04-26 23:01:00,981 35096 [INFO] Iter=183, Swarm=1, max=203.70, avg=88.10, min=19.48, std=46.35
+2022-04-26 23:01:43,782 35096 [INFO] Iter=183, Swarm=2, max=142.67, avg=53.87, min=15.76, std=26.55
+2022-04-26 23:02:58,388 35096 [INFO] Iter=184, Swarm=0, max=283.12, avg=107.40, min=25.37, std=59.05
+2022-04-26 23:03:53,114 35096 [INFO] Iter=184, Swarm=1, max=235.96, avg=73.88, min=14.22, std=44.67
+2022-04-26 23:05:09,095 35096 [INFO] Iter=184, Swarm=2, max=249.37, avg=101.73, min=17.29, std=49.97
+2022-04-26 23:06:17,988 35096 [INFO] Iter=185, Swarm=0, max=261.41, avg=100.84, min=31.71, std=47.41
+2022-04-26 23:07:29,068 35096 [INFO] Iter=185, Swarm=1, max=225.08, avg=107.73, min=32.44, std=51.07
+2022-04-26 23:08:32,540 35096 [INFO] Iter=185, Swarm=2, max=224.07, avg=77.84, min=10.66, std=44.57
+2022-04-26 23:09:51,593 35096 [INFO] Iter=186, Swarm=0, max=316.21, avg=113.34, min=21.61, std=60.44
+2022-04-26 23:11:04,925 35096 [INFO] Iter=186, Swarm=1, max=286.08, avg=105.15, min=10.34, std=56.14
+2022-04-26 23:12:40,670 35096 [INFO] Iter=186, Swarm=2, max=310.22, avg=130.48, min=23.34, std=69.79
+2022-04-26 23:13:42,134 35096 [INFO] Iter=187, Swarm=0, max=229.10, avg=79.65, min=21.93, std=43.51
+2022-04-26 23:14:45,349 35096 [INFO] Iter=187, Swarm=1, max=275.23, avg=96.34, min=25.71, std=49.73
+2022-04-26 23:15:50,431 35096 [INFO] Iter=187, Swarm=2, max=235.01, avg=89.56, min=20.86, std=46.09
+2022-04-26 23:17:22,325 35096 [INFO] Iter=188, Swarm=0, max=298.55, avg=120.28, min=16.79, std=65.25
+2022-04-26 23:18:42,579 35096 [INFO] Iter=188, Swarm=1, max=282.30, avg=117.10, min=25.10, std=60.36
+2022-04-26 23:19:58,181 35096 [INFO] Iter=188, Swarm=2, max=284.81, avg=103.88, min=13.01, std=54.80
+2022-04-26 23:21:02,295 35096 [INFO] Iter=189, Swarm=0, max=224.97, avg=87.54, min=16.91, std=45.99
+2022-04-26 23:21:55,121 35096 [INFO] Iter=189, Swarm=1, max=180.42, avg=71.27, min=20.05, std=40.73
+2022-04-26 23:22:41,762 35096 [INFO] Iter=189, Swarm=2, max=161.34, avg=62.68, min=10.41, std=31.92
+2022-04-26 23:23:44,535 35096 [INFO] Iter=190, Swarm=0, max=259.87, avg=96.36, min=18.57, std=54.24
+2022-04-26 23:25:11,866 35096 [INFO] Iter=190, Swarm=1, max=299.77, avg=125.42, min=26.19, std=64.77
+2022-04-26 23:26:06,526 35096 [INFO] Iter=190, Swarm=2, max=205.47, avg=81.03, min=18.39, std=35.92
+2022-04-26 23:27:02,585 35096 [INFO] Iter=191, Swarm=0, max=207.75, avg=79.97, min=19.81, std=42.32
+2022-04-26 23:27:51,956 35096 [INFO] Iter=191, Swarm=1, max=160.52, avg=67.62, min=8.41, std=32.61
+2022-04-26 23:28:37,561 35096 [INFO] Iter=191, Swarm=2, max=155.68, avg=60.44, min=15.93, std=28.84
+2022-04-26 23:29:50,206 35096 [INFO] Iter=192, Swarm=0, max=258.96, avg=104.78, min=25.99, std=52.09
+2022-04-26 23:31:19,415 35096 [INFO] Iter=192, Swarm=1, max=299.94, avg=125.22, min=29.84, std=68.31
+2022-04-26 23:32:11,919 35096 [INFO] Iter=192, Swarm=2, max=183.66, avg=71.54, min=14.22, std=37.57
+2022-04-26 23:33:14,535 35096 [INFO] Iter=193, Swarm=0, max=237.95, avg=95.69, min=16.70, std=50.62
+2022-04-26 23:34:46,383 35096 [INFO] Iter=193, Swarm=1, max=286.42, avg=130.45, min=23.48, std=72.56
+2022-04-26 23:36:00,966 35096 [INFO] Iter=193, Swarm=2, max=247.65, avg=95.83, min=19.30, std=51.87
+2022-04-26 23:37:14,113 35096 [INFO] Iter=194, Swarm=0, max=267.78, avg=99.52, min=22.46, std=52.91
+2022-04-26 23:37:42,014 35096 [INFO] Iter=194, Swarm=1, max=102.67, avg=38.29, min=8.49, std=18.74
+2022-04-26 23:38:20,434 35096 [INFO] Iter=194, Swarm=2, max=145.32, avg=52.44, min=12.26, std=24.22
+2022-04-26 23:39:14,007 35096 [INFO] Iter=195, Swarm=0, max=181.76, avg=77.34, min=17.06, std=40.68
+2022-04-26 23:40:24,277 35096 [INFO] Iter=195, Swarm=1, max=269.22, avg=106.91, min=32.58, std=57.31
+2022-04-26 23:41:46,342 35096 [INFO] Iter=195, Swarm=2, max=292.49, avg=116.10, min=18.59, std=57.42
+2022-04-26 23:43:13,911 35096 [INFO] Iter=196, Swarm=0, max=286.77, avg=119.87, min=15.70, std=62.29
+2022-04-26 23:44:31,464 35096 [INFO] Iter=196, Swarm=1, max=257.46, avg=113.65, min=26.29, std=60.51
+2022-04-26 23:45:49,960 35096 [INFO] Iter=196, Swarm=2, max=269.64, avg=114.31, min=27.09, std=54.19
+2022-04-26 23:46:58,453 35096 [INFO] Iter=197, Swarm=0, max=256.47, avg=106.08, min=30.97, std=52.30
+2022-04-26 23:47:45,495 35096 [INFO] Iter=197, Swarm=1, max=169.71, avg=70.21, min=19.88, std=35.99
+2022-04-26 23:48:42,708 35096 [INFO] Iter=197, Swarm=2, max=197.11, avg=72.92, min=11.09, std=39.95
+2022-04-26 23:49:28,045 35096 [INFO] Iter=198, Swarm=0, max=175.88, avg=66.18, min=21.71, std=32.54
+2022-04-26 23:50:50,070 35096 [INFO] Iter=198, Swarm=1, max=291.03, avg=109.30, min=16.86, std=62.14
+2022-04-26 23:52:19,687 35096 [INFO] Iter=198, Swarm=2, max=338.68, avg=121.33, min=25.91, std=69.94
+2022-04-26 23:53:14,799 35096 [INFO] Iter=199, Swarm=0, max=199.62, avg=75.00, min=18.22, std=43.14
+2022-04-26 23:54:48,109 35096 [INFO] Iter=199, Swarm=1, max=337.71, avg=135.14, min=27.64, std=73.08
+2022-04-26 23:56:08,906 35096 [INFO] Iter=199, Swarm=2, max=292.64, avg=123.51, min=23.34, std=57.49
